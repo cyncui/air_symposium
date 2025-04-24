@@ -21,6 +21,17 @@ export default function Home() {
         <section>
           <h1>Asian-Indigenous Symposium</h1>
         </section>
+        <section>
+          <p>
+            The symposium will be held at the Japanese Hall (September 19) and
+            Russian Hall (September 20 & 21) in so-called Vancouver, BC, which
+            is located on the traditional and unceded territories of the
+            Musqueam, Squamish, and Tsleil-Waututh Nations (MST). Hosting the
+            symposium in this location directly engages with extant histories of
+            Asian and Indigenous relation-making that have taken shape on
+            unceded MST territories over the last two centuries.
+          </p>
+        </section>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a className="flex items-center gap-2">
