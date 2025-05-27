@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Header } from "@/components/Header/Header";
+import { LandingHero } from "@/components/LandingHero/LandingHero";
 import { Footer } from "@/components/Footer/Footer";
 
 export default function Home() {
@@ -8,11 +9,8 @@ export default function Home() {
       <Header />
       <main>
         <section className="h-[80svh] w-full flex flex-col justify-center items-center bg-theme">
-          <div className="container px-4 mx-auto">
-            <h1 className="text-5xl font-serif sm:text-center">
-              Asian-Indigenous Symposium
-            </h1>
-          </div>
+          
+          <LandingHero />
         </section>
         <section className="py-24 bg-stone-500">
           <div className="container px-4 mx-auto">
