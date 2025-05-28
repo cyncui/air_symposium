@@ -1,17 +1,8 @@
 import "@/styles/globals.css";
-import { Noto_Sans, Noto_Serif } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import { Pinyon_Script } from "next/font/google";
 import type { AppProps } from "next/app";
-
-const notoSans = Noto_Sans({
-  variable: "--font-noto-sans",
-  subsets: ["latin"],
-});
-
-const notoSerif = Noto_Serif({
-  variable: "--font-noto-serif",
-  subsets: ["latin"],
-});
+import localFont from "next/font/local";
 
 const pinyonScript = Pinyon_Script({
   variable: "--font-pinyon-script",
@@ -19,10 +10,27 @@ const pinyonScript = Pinyon_Script({
   weight: "400",
 });
 
+const formom = localFont({
+  src: [
+    {
+      path: "../styles/fonts/ZT_Formom.woff2",
+
+      weight: "400",
+      style: "normal",
+    },
+    // {
+    //   path: "../styles/fonts/ZT_Formom_Italic.woff2",
+    //   weight: "400",
+    //   style: "italic",
+    // },
+  ],
+  variable: "--font-formom",
+});
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main
-      className={`${notoSans.variable} ${notoSerif.variable} ${pinyonScript.variable} min-h-screen font-sans`}
+      className={`${GeistSans.variable} ${pinyonScript.variable} ${formom.variable} min-h-screen font-sans`}
     >
       <Component {...pageProps} />
     </main>

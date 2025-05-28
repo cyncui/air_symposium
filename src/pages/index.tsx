@@ -8,10 +8,7 @@ export default function Home() {
     <div className="">
       <Header />
       <main>
-        <section className="h-[80svh] w-full flex flex-col justify-center items-center bg-theme">
-          
-          <LandingHero />
-        </section>
+        <LandingHero />
         <section className="py-24 bg-stone-500">
           <div className="container px-4 mx-auto">
             <h2 className="text-center font-serif">

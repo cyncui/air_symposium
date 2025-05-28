@@ -1,33 +1,46 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export const LandingHero = () => {
   return (
-    <section className="h-[80svh] w-full flex flex-col justify-center items-center bg-theme">
-      <div className="container px-4 mx-auto my-auto relative">
-        <h1 className="text-4xl font-serif max-sm:text-center md: text-center">
-          Asian-Indigenous Symposium
-        </h1>
-        <div className='absolute left-1/2 top-[calc(50%-1rem)] transform -translate-x-1/2 -translate-y-1/2'>
-        <Image
-            src="/../../..\svgs\landingFlowerDesktop307x577.svg"
+    <section className="min-h-[30rem] h-[80svh] max-h-[50rem] w-full flex flex-col justify-center items-center bg-background">
+      <div className="container px-4 mx-auto my-auto">
+        <div className="relative">
+          <h1 className="text-5xl md:text-6xl font-serif text-center text-foreground relative">
+            Asian-Indigenous Symposium
+          </h1>
+          <Image
+            src="/svgs/knot_top.svg"
+            alt="Top SVG"
+            width={200}
+            height={200}
+            className="absolute -top-2 -translate-y-full left-1/2 -translate-x-1/2"
+          />
+          <Image
+            src="/svgs/knot_bottom.svg"
+            alt="Bottom SVG"
+            width={200}
+            height={140}
+            className="absolute -bottom-2 translate-y-full left-1/2 -translate-x-1/2"
+          />
+        </div>
+
+        {/* <div className="absolute left-1/2 top-[calc(50%-1rem)] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          <Image
+            src="/../../../svgs/knot_top.svg"
             alt="Mobile SVG"
-            width={307}
-            height={577}
-            className=" max-sm:hidden mx-auto"
+            width={200}
+            height={200}
+            // className=" max-sm:hidden mx-auto"
           />
           <Image
             src="/../../..\svgs\landingFlowerMobile204x414.svg"
             alt="Desktop SVG"
             width={200}
             height={400}
-            className=" md:hidden mx-auto "
+            className="sm:hidden mx-auto"
           />
-          
-        </div>
+        </div> */}
       </div>
-      
     </section>
   );
 };
-
-
