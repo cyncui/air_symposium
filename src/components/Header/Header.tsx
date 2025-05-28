@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
+import Image from "next/image";
 
 import clsx from "clsx";
 import { useEffect, useState } from "react";
@@ -20,10 +21,19 @@ export const Header = () => {
   return (
     <motion.header
       className={clsx(
-        "p-4 sticky top-0 z-50 font-serif bg-gradient-to-b from-background to-transparent"
+        "p-4 sticky inset-x-0 top-0 z-50 font-serif bg-gradient-to-b from-background to-transparent"
       )}
     >
-      <nav className="container mx-auto">
+      <nav className="container mx-auto flex justify-between items-center">
+        <Link href="/">
+          <Image
+            src="/svgs/knot_sm.svg"
+            alt=""
+            width={64}
+            height={64}
+            className=""
+          />
+        </Link>
         <menu className="flex gap-8 justify-end">
           <LinkItem href="/schedule">Schedule</LinkItem>
         </menu>

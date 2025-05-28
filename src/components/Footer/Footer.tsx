@@ -25,7 +25,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex gap-2 col-span-full sm:col-span-2 row-end-auto font-serif text-xs">
+        <div className="flex gap-2 col-span-full sm:col-span-2 row-end-auto text-xs">
           <div className="size-8 rounded-full bg-foreground flex-none" />
           <div>
             <p>
