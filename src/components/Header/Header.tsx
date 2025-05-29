@@ -21,10 +21,10 @@ export const Header = () => {
   return (
     <motion.header
       className={clsx(
-        "p-4 sticky inset-x-0 top-0 z-50 font-serif bg-gradient-to-b from-background to-transparent"
+        "sticky inset-x-0 top-0 z-50 font-serif bg-gradient-to-b from-background to-transparent"
       )}
     >
-      <nav className="container mx-auto flex justify-between items-center">
+      <nav className="container p-4 mx-auto flex justify-between items-center">
         <Link href="/">
           <Image
             src="/svgs/knot_sm.svg"

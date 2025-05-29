@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import localFont from "next/font/local";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
+import { GridOverlay } from "@/components/ui/grid-overlay";
 
 const pinyonScript = Pinyon_Script({
   variable: "--font-pinyon-script",
@@ -34,6 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <main
       className={`${GeistSans.variable} ${pinyonScript.variable} ${formom.variable} min-h-screen font-sans`}
     >
+      <GridOverlay />
       <Header />
       <Component {...pageProps} />
       <Footer />
