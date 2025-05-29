@@ -33,7 +33,7 @@ const formom = localFont({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main
-      className={`${GeistSans.variable} ${pinyonScript.variable} ${formom.variable} min-h-screen font-sans`}
+      className={`${GeistSans.variable} ${pinyonScript.variable} ${formom.variable} min-h-screen font-sans text-body`}
     >
       <GridOverlay />
       <Header />

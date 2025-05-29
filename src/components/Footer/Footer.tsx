@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer className="py-32 bg-stone-100 text-background">
-      <div className="px-4 container mx-auto grid grid-cols-4 lg:grid-cols-6 gap-8">
+      <div className="px-7.5 mx-auto grid grid-cols-4 lg:grid-cols-6 gap-8">
         <div className="max-sm:col-span-full sm:col-span-2">
           <p className="mb-4">
             We acknowledge that affiliates and the team behind of AIR are
@@ -14,16 +14,6 @@ export const Footer = () => {
             restitution of these colonial places, both offline and online. Land
             back!
           </p>
-        </div>
-        <div className="max-sm:col-span-full">
-          <h3>Contact</h3>
-          <ul>
-            <li>
-              <a href="https://asianindigenousrelations.ca" target="_blank">
-                asianindigenousrelations.ca
-              </a>
-            </li>
-          </ul>
         </div>
         <div className="flex gap-2 col-span-full sm:col-span-2 row-end-auto text-xs">
           <div className="size-8 rounded-full bg-foreground flex-none" />

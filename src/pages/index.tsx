@@ -14,7 +14,7 @@ export default function Home() {
     <main>
       <LandingHero />
       <section className="py-24 ">
-        <div className="container px-4 mx-auto">
+        <div className="px-7.5 mx-auto">
           <h2 className="text-center font-serif text-heading-2 relative">
             The Past, Present, and Future
             <span className="leading-0 h-0 relative block">
@@ -27,42 +27,55 @@ export default function Home() {
         </div>
       </section>
       <section className="py-24">
-        <div className="container px-4 mx-auto">
-          <article className="mb-12">
-            <span className="inline-block font-serif text-sm mb-2">
-              <time dateTime="2025-09-19">Friday, Sept 19</time>
+        <div className="section__hz mx-auto">
+          <article className="mb-12 col-span-full md:col-span-5 md:col-start-2 grid grid-cols-subgrid">
+            <span className="inline-block font-script text-ornament text-theme-dark font-bold mb-2 col-span-2">
+              <time dateTime="2025-09-19">September 19</time>
             </span>
-            <h2 className="text-6xl mb-4 font-script">Japanese Hall</h2>
-            <p>
-              The symposium will be held at the Japanese Hall (September 19) and
-              Russian Hall (September 20 & 21) in so-called Vancouver, BC, which
-              is located on the traditional and unceded territories of the
-              Musqueam, Squamish, and Tsleil-Waututh Nations (MST). Hosting the
-              symposium in this location directly engages with extant histories
-              of Asian and Indigenous relation-making that have taken shape on
-              unceded MST territories over the last two centuries.
-            </p>
+            <div className="aspect-square md:aspect-video border border-foreground col-span-full" />
+            <h2 className="font-serif text-heading-2 col-span-2 -col-end-1 text-right">
+              Japanese Hall
+            </h2>
+            <div className="-col-end-1">
+              <address>
+                <a
+                  href="https://maps.app.goo.gl/BkF5qg8ByqPDvUFA9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="not-italic"
+                >
+                  487 Alexander St.
+                </a>
+              </address>
+              <time dateTime="2025-09-19">9AM to 6PM</time>
+            </div>
           </article>
-          <article className="mb-12">
-            <span className="inline-block font-serif text-sm mb-2">
-              <time dateTime="2025-09-20">Saturday, Sept 20</time> to{" "}
-              <time dateTime="2025-09-21">Sunday, Sept 21</time>
+          <article className="mb-12 col-span-full md:col-span-5 md:col-start-2 grid grid-cols-subgrid">
+            <span className="inline-block font-script text-ornament text-theme-dark font-bold mb-2 col-span-2">
+              <time dateTime="2025-09-19">September 20 &amp; 21</time>
             </span>
-            <h2 className="text-6xl mb-4 font-script">Russian Hall</h2>
-            <p>
-              The symposium will be held at the Japanese Hall (September 19) and
-              Russian Hall (September 20 & 21) in so-called Vancouver, BC, which
-              is located on the traditional and unceded territories of the
-              Musqueam, Squamish, and Tsleil-Waututh Nations (MST). Hosting the
-              symposium in this location directly engages with extant histories
-              of Asian and Indigenous relation-making that have taken shape on
-              unceded MST territories over the last two centuries.
-            </p>
+            <div className="aspect-square md:aspect-video border border-foreground col-span-full" />
+            <h2 className="font-serif text-heading-2 col-span-3 lg:col-span-2 -col-end-1 lg:-col-end-1 text-right">
+              Russian Hall
+            </h2>
+            <div className="col-span-3 md:col-span-2 -col-end-1 md:-col-end-1">
+              <address>
+                <a
+                  href="https://maps.app.goo.gl/pRJhjMN7QXshPRZG6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="not-italic"
+                >
+                  600 Campbell Ave.
+                </a>
+              </address>
+              <time dateTime="2025-09-19">9AM to 6PM</time>
+            </div>
           </article>
         </div>
       </section>
       <section className="py-24">
-        <div className="container px-4 mx-auto">
+        <div className="px-7.5 mx-auto">
           <h2 className="text-center font-serif text-3xl">Schedule</h2>
           {/* <Carousel>
             <CarouselContent>

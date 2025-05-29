@@ -196,6 +196,9 @@ body {
   .text-ornament{
     @apply text-ornament-sm md:text-ornament-md lg:text-ornament-lg 3xl:text-ornament-xl
   }
+  .section__hz{
+    @apply px-7.5 grid grid-cols-7 gap-x-1.5
+  }
   /* .text-heading-b{
     @apply text-heading-b-sm md:text-heading-b-md lg:text-heading-b-lg 3xl:text-heading-b-xl
   } */

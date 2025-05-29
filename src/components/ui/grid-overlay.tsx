@@ -19,7 +19,7 @@ function GridOverlay({ className, ...props }: React.ComponentProps<"div">) {
       className={`fixed inset-0 pointer-events-none ${className}`}
       {...props}
     >
-      <div className="container px-4 grid grid-cols-7 gap-x-1.5 h-full mx-auto">
+      <div className="section__hz h-full mx-auto">
         {Array.from({ length: 7 }).map((_, index) => (
           <div
             key={index}

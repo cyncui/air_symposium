@@ -3,7 +3,7 @@ import Image from "next/image";
 export const LandingHero = () => {
   return (
     <section className="min-h-[30rem] h-[80svh] max-h-[50rem] w-full flex flex-col justify-center items-center bg-background">
-      <div className="container px-4 mx-auto my-auto">
+      <div className="px-7.5 mx-auto my-auto">
         <div className="relative">
           <h1 className="text-heading-1 font-serif text-center text-foreground relative">
             Asian-Indigenous Symposium
