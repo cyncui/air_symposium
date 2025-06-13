@@ -1,3 +1,5 @@
+import { Logo } from "../Logo/Logo";
+
 export const Footer = () => {
   return (
     <footer className="py-32 bg-stone-100 text-background">
@@ -16,7 +18,9 @@ export const Footer = () => {
           </p>
         </div>
         <div className="flex gap-2 col-span-full sm:col-span-3 lg:col-span-2 row-end-auto text-xs">
-          <div className="size-8 rounded-full bg-foreground flex-none" />
+          <a href="https://asianindigenousrelations.ca" target="_blank">
+            <Logo />
+          </a>
           <div>
             <p>
               This symposium is an initiative of{" "}
