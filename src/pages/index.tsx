@@ -29,14 +29,14 @@ export default function Home() {
       <section className="py-24">
         <div className="section__hz mx-auto">
           <article className="mb-12 col-span-full md:col-span-5 md:col-start-2 grid grid-cols-subgrid">
-            <span className="inline-block font-script text-ornament text-theme-dark font-bold mb-2 col-span-2">
+            <span className="inline-block font-script text-ornament text-theme-dark font-bold mb-2 col-span-full">
               <time dateTime="2025-09-19">September 19</time>
             </span>
             <div className="aspect-square md:aspect-video border border-foreground col-span-full" />
-            <h2 className="font-serif text-heading-2 col-span-2 -col-end-1 text-right">
+            <h2 className="font-serif text-heading-2 col-span-3 lg:col-span-2 -col-end-1 lg:-col-end-1">
               Japanese Hall
             </h2>
-            <div className="-col-end-1">
+            <div className="col-span-3 lg:col-span-2 -col-end-1 lg:-col-end-1">
               <address>
                 <a
                   href="https://maps.app.goo.gl/BkF5qg8ByqPDvUFA9"
@@ -51,14 +51,14 @@ export default function Home() {
             </div>
           </article>
           <article className="mb-12 col-span-full md:col-span-5 md:col-start-2 grid grid-cols-subgrid">
-            <span className="inline-block font-script text-ornament text-theme-dark font-bold mb-2 col-span-2">
+            <span className="inline-block font-script text-ornament text-theme-dark font-bold mb-2 col-span-full">
               <time dateTime="2025-09-19">September 20 &amp; 21</time>
             </span>
             <div className="aspect-square md:aspect-video border border-foreground col-span-full" />
-            <h2 className="font-serif text-heading-2 col-span-3 lg:col-span-2 -col-end-1 lg:-col-end-1 text-right">
+            <h2 className="font-serif text-heading-2 col-span-3 lg:col-span-2 -col-end-1 lg:-col-end-1">
               Russian Hall
             </h2>
-            <div className="col-span-3 md:col-span-2 -col-end-1 md:-col-end-1">
+            <div className="col-span-3 lg:col-span-2 -col-end-1 lg:-col-end-1">
               <address>
                 <a
                   href="https://maps.app.goo.gl/pRJhjMN7QXshPRZG6"
