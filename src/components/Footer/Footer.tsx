@@ -3,8 +3,8 @@ import { Logo } from "../Logo/Logo";
 export const Footer = () => {
   return (
     <footer className="py-32 bg-stone-100 text-background">
-      <div className="px-7.5 mx-auto grid grid-cols-7 gap-4">
-        <div className="max-sm:col-span-full sm:col-span-3 lg:col-span-2">
+      <div className="px-7.5 mx-auto grid grid-cols-7 *:col-span-full *:sm:col-start-1 *:sm:col-span-3 *:lg:col-span-2 *:lg:col-start-1">
+        <div className="">
           <p className="mb-4">
             We acknowledge that affiliates and the team behind of AIR are
             residing on stolen land of the səl̓ilw̓ətaʔɬ (Tsleil-Waututh),
@@ -17,7 +17,7 @@ export const Footer = () => {
             back!
           </p>
         </div>
-        <div className="flex gap-2 col-span-full sm:col-span-3 lg:col-span-2 row-end-auto text-xs">
+        <div className="flex gap-2 text-xs">
           <a href="https://asianindigenousrelations.ca" target="_blank">
             <Logo />
           </a>
@@ -27,7 +27,7 @@ export const Footer = () => {
               <a
                 href="https://asianindigenousrelations.ca"
                 target="_blank"
-                className="font-bold"
+                className="font-bold underline"
               >
                 Asian-Indigenous Relations
               </a>
