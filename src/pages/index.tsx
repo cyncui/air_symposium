@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { LandingHero } from "@/components/LandingHero/LandingHero";
+import { dayCTA } from "@/components/DayCTA/DayCTA";
 import {
   Carousel,
   CarouselContent,
