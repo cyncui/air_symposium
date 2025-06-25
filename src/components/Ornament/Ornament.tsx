@@ -1,9 +1,33 @@
-import { motion, MotionConfig } from "motion/react";
+import { transition } from "d3";
+import { easeInOut, motion, MotionConfig } from "motion/react";
 interface OrnamentProps extends React.SVGProps<SVGSVGElement> {
   //   className?: string;
 }
 
 export const OrnamentSM = ({ className, ...props }: OrnamentProps) => {
+  const container = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    initial: { opacity: 0, scale: 0 },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: easeInOut },
+    },
+  };
+
+  const path = {
+    initial: { pathLength: 0 },
+    animate: { pathLength: 1, transition: { duration: 0.75, ease: easeInOut } },
+  };
   return (
     <svg
       width="230"
@@ -51,85 +75,78 @@ export const OrnamentSM = ({ className, ...props }: OrnamentProps) => {
           fill="#F6EEDD"
         />
       </mask>
-      <g mask="url(#mask0_1238_215)">
-        <MotionConfig transition={{ duration: 2, ease: "easeInOut" }}>
-          <motion.path
-            d="M147.096 207.75C147.633 207.75 148.231 208.006 148.724 208.207C149.422 208.493 150.238 208.783 150.898 209.149C152.188 209.862 153.555 210.521 154.879 211.183C157.079 212.283 159.205 213.837 161.2 215.241C163.325 216.736 165.518 218.297 167.153 220.341C167.937 221.321 169.082 222.003 169.963 222.884C170.857 223.778 171.752 224.794 172.736 225.581C173.272 226.009 173.775 226.549 174.198 227.094C174.656 227.683 175.275 228.102 175.737 228.697C176.695 229.928 177.492 231.23 178.434 232.474C179.986 234.525 181.118 236.798 182.376 239.024C183.134 240.365 183.721 241.853 184.411 243.234C184.643 243.698 185.034 244.107 185.187 244.607C185.322 245.05 185.61 245.601 185.874 245.981C190.871 253.177 188.957 269.115 196.456 273.936C216 286.5 228 266.5 220.5 244"
-            stroke="var(--foreground)"
-            strokeWidth="17"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-          />
-          <motion.path
-            d="M82.9514 148.673C82.8983 157.332 91.5993 182.544 125.898 206.514C160.196 230.485 154.852 254.753 147.892 263.891C142.473 275.207 125.93 292.739 103.107 272.338C97.9532 266.494 91.2969 250.75 99.0747 236.342"
-            stroke="var(--foreground)"
-            strokeWidth="27"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-          />
-          <motion.path
-            d="M88.9219 281.901C91.3126 288.967 102.756 302.334 129.404 299.273"
-            stroke="var(--foreground)"
-            strokeWidth="10"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-          />
-          <motion.path
-            d="M177.059 214.005C185.931 216.502 205.364 217.129 212.122 199.661"
-            stroke="var(--foreground)"
-            strokeWidth="10"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-          />
-          <motion.path
-            d="M71.5 30C83.0348 33.1971 109.748 56.7392 110.5 110"
-            stroke="var(--foreground)"
-            strokeWidth="12"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-          />
-          <motion.path
-            d="M0.885742 18.2466C26.7764 24.9543 74.3599 44.926 54.5 86C39.2165 111.092 12.5 92 12.5 64.5"
-            stroke="var(--foreground)"
-            strokeWidth="25"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-          />
-          <motion.path
-            d="M0.202148 2.05103C24.5256 6.81532 75.7301 28.7188 85.961 78.2183C87.6536 85.3649 93.1146 103.404 92.6632 116.042C92.2118 128.68 107.897 154.784 115.796 166.256C126.515 177.791 151.19 200.559 164.129 199.356C207.314 202.463 199.412 159.605 166.5 149.5"
-            stroke="var(--foreground)"
-            strokeWidth="26"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-          />
-        </MotionConfig>
-      </g>
-      <MotionConfig transition={{ duration: 0.5, ease: "easeInOut" }}>
+      <motion.g
+        mask="url(#mask0_1238_215)"
+        variants={container}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.path
+          d="M0.885742 18.2466C26.7764 24.9543 74.3599 44.926 54.5 86C39.2165 111.092 12.5 92 12.5 64.5"
+          stroke="var(--foreground)"
+          strokeWidth="25"
+          variants={path}
+        />
+        <motion.path
+          d="M0.202148 2.05103C24.5256 6.81532 75.7301 28.7188 85.961 78.2183C87.6536 85.3649 93.1146 103.404 92.6632 116.042C92.2118 128.68 107.897 154.784 115.796 166.256C126.515 177.791 151.19 200.559 164.129 199.356C207.314 202.463 199.412 159.605 166.5 149.5"
+          stroke="var(--foreground)"
+          strokeWidth="26"
+          variants={path}
+        />
+        <motion.path
+          d="M82.9514 148.673C82.8983 157.332 91.5993 182.544 125.898 206.514C160.196 230.485 154.852 254.753 147.892 263.891C142.473 275.207 125.93 292.739 103.107 272.338C97.9532 266.494 91.2969 250.75 99.0747 236.342"
+          stroke="var(--foreground)"
+          strokeWidth="27"
+          variants={path}
+        />
+        <motion.path
+          d="M147.096 207.75C147.633 207.75 148.231 208.006 148.724 208.207C149.422 208.493 150.238 208.783 150.898 209.149C152.188 209.862 153.555 210.521 154.879 211.183C157.079 212.283 159.205 213.837 161.2 215.241C163.325 216.736 165.518 218.297 167.153 220.341C167.937 221.321 169.082 222.003 169.963 222.884C170.857 223.778 171.752 224.794 172.736 225.581C173.272 226.009 173.775 226.549 174.198 227.094C174.656 227.683 175.275 228.102 175.737 228.697C176.695 229.928 177.492 231.23 178.434 232.474C179.986 234.525 181.118 236.798 182.376 239.024C183.134 240.365 183.721 241.853 184.411 243.234C184.643 243.698 185.034 244.107 185.187 244.607C185.322 245.05 185.61 245.601 185.874 245.981C190.871 253.177 188.957 269.115 196.456 273.936C216 286.5 228 266.5 220.5 244"
+          stroke="var(--foreground)"
+          strokeWidth="17"
+          variants={path}
+        />
+
+        <motion.path
+          d="M88.9219 281.901C91.3126 288.967 102.756 302.334 129.404 299.273"
+          stroke="var(--foreground)"
+          strokeWidth="10"
+          variants={path}
+        />
+        <motion.path
+          d="M177.059 214.005C185.931 216.502 205.364 217.129 212.122 199.661"
+          stroke="var(--foreground)"
+          strokeWidth="10"
+          variants={path}
+        />
+        <motion.path
+          d="M71.5 30C83.0348 33.1971 109.748 56.7392 110.5 110"
+          stroke="var(--foreground)"
+          strokeWidth="12"
+          variants={path}
+        />
+      </motion.g>
+      <motion.g variants={container} initial="initial" animate="animate">
         <motion.path
           d="M199.066 258.002C199.52 256.74 201.935 256.453 204.459 257.361C206.983 258.268 208.662 260.027 208.209 261.289C207.755 262.551 205.34 262.84 202.815 261.932C200.291 261.024 198.613 259.264 199.066 258.002Z"
           fill="#F6EEDD"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
+          variants={item}
         />
         <motion.path
           d="M120.871 238.597C125.651 234.555 131.514 233.63 133.969 236.531C136.423 239.433 134.538 245.062 129.759 249.105C124.979 253.147 119.115 254.072 116.661 251.17C114.207 248.268 116.092 242.639 120.871 238.597Z"
           fill="#F6EEDD"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
+          variants={item}
         />
         <motion.path
           d="M160.422 167.585C162.689 164.973 166.26 164.359 168.398 166.214C170.537 168.069 170.433 171.691 168.166 174.304C165.899 176.916 162.329 177.53 160.19 175.675C158.052 173.82 158.155 170.198 160.422 167.585Z"
           fill="#F6EEDD"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
+          variants={item}
         />
         <motion.path
           d="M32.0655 65.8859C35.2064 64.9749 38.3339 66.2403 39.0508 68.7121C39.7677 71.1839 37.803 73.926 34.6622 74.8371C31.5212 75.7481 28.3937 74.4827 27.6768 72.0109C26.96 69.5392 28.9247 66.7969 32.0655 65.8859Z"
           fill="#F6EEDD"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
+          variants={item}
         />
-      </MotionConfig>
+      </motion.g>
     </svg>
   );
 };
