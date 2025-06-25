@@ -4,13 +4,22 @@ import { Logo } from "../Logo/Logo";
 export const Footer = () => {
   return (
     <footer className="bg-stone-100 text-background py-7.5 px-7.5">
-      <div className="mb-10">
+      <div className="mb-6">
+        <a
+          className="block text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl mb-6"
+          href="mailto:hello@asianindigenousrelations.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          hello@asianindigenous
+          <wbr />
+          relations.ca{" "}
+          <span className="inline-flex">
+            <div className="size-4 bg-background" />
+          </span>
+        </a>
 
-          <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl min-w-0 mr-4 mb-10">
-            hello@asianindigenousrelations.ca
-          </h1>
-
-        <hr className="border-t-2 border-[#FA4A23]" />
+        <hr className="border-t border-[#FA4A23]" />
       </div>
       <div className=" mx-auto grid gap-8 lg:grid-cols-3 mb-12 grid-col-1">
         {/* Column 1 */}
@@ -78,7 +87,7 @@ export const Footer = () => {
         </a>
         <span className="font-serif text-2xl opacity-50">
           ALL RIGHTS RESERVED, ASIAN-INDIGENOUS RELATIONS COLLECTIVE 2025
-          </span>
+        </span>
       </div>
     </footer>
   );
