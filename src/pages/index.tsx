@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Fragment } from "react";
-import { OrnamentSM } from "@/components/Ornament/Ornament";
+import { OrnamentMD, OrnamentSM } from "@/components/Ornament/Ornament";
 
 export default function Home() {
   return (
@@ -53,7 +53,8 @@ export default function Home() {
               <LandingVenue {...location} />
               {idx < 1 && (
                 <div className="col-span-full">
-                  <OrnamentSM className="mx-auto my-12" />
+                  <OrnamentSM className="mx-auto my-12 w-30" />
+                  <OrnamentMD className="mx-auto my-12 w-60" />
                 </div>
               )}
             </Fragment>
