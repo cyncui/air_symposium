@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { LandingHero } from "@/components/LandingHero/LandingHero";
+import { LandingHero } from "@/components/Landing/LandingHero";
+import { LandingVenue } from "@/components/Landing/LandingVenue";
 import {
   Carousel,
   CarouselContent,
@@ -8,6 +9,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import { Fragment } from "react";
+import { OrnamentMD, OrnamentSM } from "@/components/Ornament/Ornament";
 
 export default function Home() {
   return (
@@ -26,55 +29,43 @@ export default function Home() {
           </h2>
         </div>
       </section>
-      <section className="py-24">
+      <section>
         <div className="section__hz mx-auto">
-          <article className="mb-12 col-span-full md:col-span-5 md:col-start-2 grid grid-cols-subgrid">
-            <span className="inline-block font-script text-ornament text-theme-dark font-bold mb-2 col-span-full">
-              <time dateTime="2025-09-19">September 19</time>
-            </span>
-            <div className="aspect-square md:aspect-video border border-foreground col-span-full" />
-            <h2 className="font-serif text-heading-2 col-span-3 lg:col-span-2 -col-end-1 lg:-col-end-1">
-              Japanese Hall
-            </h2>
-            <div className="col-span-3 lg:col-span-2 -col-end-1 lg:-col-end-1">
-              <address>
-                <a
-                  href="https://maps.app.goo.gl/BkF5qg8ByqPDvUFA9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="not-italic"
-                >
-                  487 Alexander St.
-                </a>
-              </address>
-              <time dateTime="2025-09-19">9AM to 6PM</time>
-            </div>
-          </article>
-          <article className="mb-12 col-span-full md:col-span-5 md:col-start-2 grid grid-cols-subgrid">
-            <span className="inline-block font-script text-ornament text-theme-dark font-bold mb-2 col-span-full">
-              <time dateTime="2025-09-19">September 20 &amp; 21</time>
-            </span>
-            <div className="aspect-square md:aspect-video border border-foreground col-span-full" />
-            <h2 className="font-serif text-heading-2 col-span-3 lg:col-span-2 -col-end-1 lg:-col-end-1">
-              Russian Hall
-            </h2>
-            <div className="col-span-3 lg:col-span-2 -col-end-1 lg:-col-end-1">
-              <address>
-                <a
-                  href="https://maps.app.goo.gl/pRJhjMN7QXshPRZG6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="not-italic"
-                >
-                  600 Campbell Ave.
-                </a>
-              </address>
-              <time dateTime="2025-09-19">9AM to 6PM</time>
-            </div>
-          </article>
+          {[
+            {
+              date: "September 19",
+              dateTime: "2025-09-19",
+              venue: "Japanese Hall",
+              address: "487 Alexander St.",
+              mapUrl: "https://maps.app.goo.gl/BkF5qg8ByqPDvUFA9",
+              time: "9AM to 6PM",
+              image: "/images/japanese-hall.png",
+            },
+            {
+              date: "September 20 & 21",
+              dateTime: "2025-09-19",
+              venue: "Russian Hall",
+              address: "600 Campbell Ave.",
+              mapUrl: "https://maps.app.goo.gl/pRJhjMN7QXshPRZG6",
+              time: "9AM to 6PM",
+              image: "/images/russian-hall.png",
+            },
+          ].map((location, idx) => (
+            <Fragment key={idx}>
+              <LandingVenue {...location} />
+              {idx < 1 && (
+                <div className="col-span-full">
+                  <OrnamentSM className="mx-auto my-12 w-30" />
+                </div>
+              )}
+            </Fragment>
+          ))}
         </div>
       </section>
-      <section className="py-24">
+      <div className="col-span-full">
+        <OrnamentMD className="mx-auto w-60" />
+      </div>
+      <section>
         <div className="px-7.5 mx-auto">
           <h2 className="text-center font-serif text-3xl">Schedule</h2>
           {/* <Carousel>

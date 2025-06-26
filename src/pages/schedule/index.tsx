@@ -3,7 +3,6 @@ import { MobileSchedule } from "@/components/MobileSchedule/MobileSchedule";
 export default function Home() {
   return (
     <main>
-      
       <section className="py-24 bg-stone-500">
         <div className="px-7.5 mx-auto">
           <h2 className="text-center font-serif">
@@ -11,7 +10,6 @@ export default function Home() {
           </h2>
           <MobileSchedule />
         </div>
-        
       </section>
     </main>
   );
