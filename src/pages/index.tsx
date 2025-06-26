@@ -39,6 +39,7 @@ export default function Home() {
               address: "487 Alexander St.",
               mapUrl: "https://maps.app.goo.gl/BkF5qg8ByqPDvUFA9",
               time: "9AM to 6PM",
+              image: "/images/japanese-hall.png",
             },
             {
               date: "September 20 & 21",
@@ -47,6 +48,7 @@ export default function Home() {
               address: "600 Campbell Ave.",
               mapUrl: "https://maps.app.goo.gl/pRJhjMN7QXshPRZG6",
               time: "9AM to 6PM",
+              image: "/images/russian-hall.png",
             },
           ].map((location, idx) => (
             <Fragment key={idx}>

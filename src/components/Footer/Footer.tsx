@@ -21,7 +21,7 @@ export const Footer = () => {
 
         <hr className="border-t border-[#FA4A23]" />
       </div>
-      <div className=" mx-auto grid gap-8 lg:grid-cols-3 mb-12 grid-col-1">
+      <div className=" mx-auto grid gap-8 lg:grid-cols-3 mb-12 grid-col-1 text-body">
         {/* Column 1 */}
         <div>
           <p className="mb-4">
