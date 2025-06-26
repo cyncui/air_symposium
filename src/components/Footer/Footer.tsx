@@ -1,22 +1,22 @@
 import Image from "next/image";
 import { Logo } from "../Logo/Logo";
+import Arrow from "@/assets/icons/icon_arrow-top-right.svg";
 
 export const Footer = () => {
   return (
     <footer className="bg-stone-100 text-background py-7.5 px-7.5">
       <div className="mb-6">
         <a
-          className="block text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl mb-6"
+          className="inline-block items-center-safe text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl mb-6"
           href="mailto:hello@asianindigenousrelations.ca"
           target="_blank"
           rel="noopener noreferrer"
         >
           hello@asianindigenous
           <wbr />
-          relations.ca{" "}
-          <span className="inline-flex">
-            <div className="size-4 bg-background" />
-          </span>
+          relations.ca {/* <span className="inline-flex"> */}
+          <Arrow className="inline-flex size-6 fill-background" />
+          {/* </span> */}
         </a>
 
         <hr className="border-t border-[#FA4A23]" />

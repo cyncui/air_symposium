@@ -29,7 +29,7 @@ export default function Home() {
           </h2>
         </div>
       </section>
-      <section className="py-24">
+      <section>
         <div className="section__hz mx-auto">
           {[
             {
@@ -56,14 +56,16 @@ export default function Home() {
               {idx < 1 && (
                 <div className="col-span-full">
                   <OrnamentSM className="mx-auto my-12 w-30" />
-                  <OrnamentMD className="mx-auto my-12 w-60" />
                 </div>
               )}
             </Fragment>
           ))}
         </div>
       </section>
-      <section className="py-24">
+      <div className="col-span-full">
+        <OrnamentMD className="mx-auto w-60" />
+      </div>
+      <section>
         <div className="px-7.5 mx-auto">
           <h2 className="text-center font-serif text-3xl">Schedule</h2>
           {/* <Carousel>
