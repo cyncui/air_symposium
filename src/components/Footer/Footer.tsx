@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Logo } from "../Logo/Logo";
-// import Arrow from "@/assets/icons/icon_arrow-top-right.svg";
+import Arrow from "@/assets/icons/icon_arrow-top-right.svg";
 
 export const Footer = () => {
   return (
@@ -15,7 +15,7 @@ export const Footer = () => {
           hello@asianindigenous
           <wbr />
           relations.ca {/* <span className="inline-flex"> */}
-          {/* <Arrow className="inline-flex size-[1em] -translate-x-1/5 fill-inherit" /> */}
+          <Arrow className="inline-flex size-[1em] -translate-x-1/5 fill-inherit" />
           {/* </span> */}
         </a>
 
