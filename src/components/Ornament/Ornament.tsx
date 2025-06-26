@@ -1,4 +1,3 @@
-import { transition } from "d3";
 import { easeInOut, motion, MotionConfig } from "motion/react";
 interface OrnamentProps extends React.SVGProps<SVGSVGElement> {
   //   className?: string;
