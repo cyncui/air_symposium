@@ -26,9 +26,10 @@ export const Footer = () => {
         <div>
           <p className="mb-4">
             The symposium is a project by Asian-Indigenous Relations, a
-            collective based in so-called "vancouver". It is supported in part
-            by funding from the Social Sciences and Humanities Research Council.
-            For a full list of funding organizations, please visit this page.
+            collective based in so-called &ldquo;vancouver&rdquo;. It is
+            supported in part by funding from the Social Sciences and Humanities
+            Research Council. For a full list of funding organizations, please
+            visit this page.
           </p>
           <p className="mb-4">
             This site was created by{" "}
