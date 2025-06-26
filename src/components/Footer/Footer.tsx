@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="bg-stone-100 text-background py-7.5 px-7.5">
       <div className="mb-6">
         <a
-          className="inline-block items-center-safe text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl mb-6"
+          className="inline-block items-center-safe text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl mb-6 group hover:text-theme-dark hover:fill-theme-dark fill-background transition-colors "
           href="mailto:hello@asianindigenousrelations.ca"
           target="_blank"
           rel="noopener noreferrer"
@@ -15,7 +15,7 @@ export const Footer = () => {
           hello@asianindigenous
           <wbr />
           relations.ca {/* <span className="inline-flex"> */}
-          <Arrow className="inline-flex size-6 fill-background" />
+          <Arrow className="inline-flex size-[1em] -translate-x-1/5 fill-inherit" />
           {/* </span> */}
         </a>
 
