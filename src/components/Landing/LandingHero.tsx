@@ -1,4 +1,8 @@
 import Image from "next/image";
+import {
+  OrnamentFlourishA,
+  OrnamentFlourishB,
+} from "../Ornament/OrnamentFlourish";
 
 export const LandingHero = () => {
   return (
@@ -22,6 +26,8 @@ export const LandingHero = () => {
             height={140}
             className="absolute -bottom-0 translate-y-full left-1/2 -translate-x-1/2"
           />
+          <OrnamentFlourishA className="max-md:hidden absolute -top-0 right-0 -translate-y-full" />
+          <OrnamentFlourishB className="max-md:hidden absolute bottom-0 left-0 translate-y-full" />
         </div>
 
         {/* <div className="absolute left-1/2 top-[calc(50%-1rem)] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">

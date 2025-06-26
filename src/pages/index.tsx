@@ -10,7 +10,8 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Fragment } from "react";
-import { OrnamentMD, OrnamentSM } from "@/components/Ornament/Ornament";
+import { OrnamentSM } from "@/components/Ornament/OrnamentSM";
+import { OrnamentMD } from "@/components/Ornament/OrnamentMD";
 
 export default function Home() {
   return (
