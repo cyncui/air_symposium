@@ -2,7 +2,7 @@ import clsx from "clsx";
 import * as React from "react";
 
 function GridOverlay({ className, ...props }: React.ComponentProps<"div">) {
-  const [visible, setVisible] = React.useState(true);
+  const [visible, setVisible] = React.useState(false);
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "G" && event.shiftKey) {

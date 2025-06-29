@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <main>
       <LandingHero />
-      <section className="py-24 ">
-        <div className="px-7.5 mx-auto">
+      <section className="py-24 min-h-[300svh] flex flex-col">
+        <div className="px-7.5 mx-auto my-auto">
           <h2 className="text-center font-serif text-heading-2 relative">
             The Past, Present, and Future
             <span className="leading-0 h-0 relative block">
