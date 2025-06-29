@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { LandingHero } from "@/components/Landing/LandingHero";
 import { LandingVenue } from "@/components/Landing/LandingVenue";
+import { DayCTA } from "@/components/DayCTA/DayCTA";  
 import {
   Carousel,
   CarouselContent,
@@ -68,7 +69,8 @@ export default function Home() {
       </div>
       <section>
         <div className="px-7.5 mx-auto">
-          <h2 className="text-center font-serif text-3xl">Schedule</h2>
+            <DayCTA 
+            />
           {/* <Carousel>
             <CarouselContent>
               <CarouselItem>...</CarouselItem>
