@@ -21,7 +21,7 @@ export const Header = () => {
   return (
     <motion.header
       className={clsx(
-        "sticky inset-x-0 top-0 z-50 font-serif bg-gradient-to-b from-background to-transparent"
+        "sticky inset-x-0 md:fixed top-0 z-50 font-serif bg-gradient-to-b from-background to-transparent"
       )}
     >
       <nav className="py-4 px-7.5 mx-auto flex justify-between items-center">

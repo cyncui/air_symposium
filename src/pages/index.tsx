@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { LandingHero } from "@/components/Landing/LandingHero";
 import { LandingVenue } from "@/components/Landing/LandingVenue";
-import { DayCTA } from "@/components/DayCTA/DayCTA";  
+import { DayCTA } from "@/components/DayCTA/DayCTA";
 import {
   Carousel,
   CarouselContent,
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="section__hz mx-auto">
+        <div className="subsection mx-auto">
           {[
             {
               date: "September 19",
@@ -68,9 +68,8 @@ export default function Home() {
         <OrnamentMD className="mx-auto w-60" />
       </div>
       <section>
-        <div className="px-7.5 mx-auto">
-            <DayCTA 
-            />
+        <div className="subsection mx-auto bg-blue-500">
+          <DayCTA />
           {/* <Carousel>
             <CarouselContent>
               <CarouselItem>...</CarouselItem>

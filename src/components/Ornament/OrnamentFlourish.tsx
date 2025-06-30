@@ -34,7 +34,7 @@ export const OrnamentFlourishA = ({ className, ...props }: OrnamentProps) => {
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={clsx(className, "w-80")}
+      className={clsx(className, "w-75")}
       {...props}
     >
       <mask

@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 
 export const LandingHero = () => {
   return (
-    <section className="min-h-[30rem] h-[80svh] max-h-[50rem] w-full flex flex-col justify-center items-center bg-background">
+    <section className="min-h-[30rem] max-md:h-[100svh] md:min-h-[60rem] max-h-[60rem] w-full flex flex-col justify-center items-center bg-background">
       <div className="px-7.5 mx-auto my-auto">
         <div className="relative">
           <motion.h1
