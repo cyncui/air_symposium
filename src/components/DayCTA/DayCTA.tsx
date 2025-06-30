@@ -20,7 +20,7 @@ const ctaContent: Record<DayKey, {
   },
 };
 export const DayCTA = () => {
-   const [selectedDay, setSelectedDay] = useState<DayKey>('day1');
+    const [selectedDay, setSelectedDay] = useState<DayKey>('day1');
 
   const { text, image } = ctaContent[selectedDay];
   return (
@@ -31,10 +31,10 @@ export const DayCTA = () => {
           <h2
             key={day}
             onClick={() => setSelectedDay(day)}
-            className={`font-serif text-ornament cursor-pointer transition-colors duration-200 mr-[6vw] text-nowrap${
+            className={`font-serif text-ornament cursor-pointer transition-colors duration-200 mr-[6vw] text-nowrap ${
               selectedDay === day
                 ? 'text-theme-light'
-                : 'text-[#F89C80] hover:text-gray-600'
+                : 'text-[#F89C80] hover:text-[#F6EEDD]'
             }`}
           >
             {day.replace('day', 'Day ')}
