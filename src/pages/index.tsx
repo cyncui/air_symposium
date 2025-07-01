@@ -18,6 +18,20 @@ export default function Home() {
   return (
     <main>
       <LandingHero />
+      <section>
+        <div className="subsection mx-auto bg-blue-500">
+          <DayCTA />
+          {/* <Carousel>
+            <CarouselContent>
+              <CarouselItem>...</CarouselItem>
+              <CarouselItem>...</CarouselItem>
+              <CarouselItem>...</CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel> */}
+        </div>
+      </section>
       <section className="py-24 min-h-[300svh] flex flex-col">
         <div className="px-7.5 mx-auto my-auto">
           <h2 className="text-center font-serif text-heading-2 relative">
@@ -67,20 +81,6 @@ export default function Home() {
       <div className="col-span-full">
         <OrnamentMD className="mx-auto w-60" />
       </div>
-      <section>
-        <div className="subsection mx-auto bg-blue-500">
-          <DayCTA />
-          {/* <Carousel>
-            <CarouselContent>
-              <CarouselItem>...</CarouselItem>
-              <CarouselItem>...</CarouselItem>
-              <CarouselItem>...</CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel> */}
-        </div>
-      </section>
     </main>
   );
 }

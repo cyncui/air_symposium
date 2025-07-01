@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { OrnamentMorph } from "../Ornament/OrnamentMorph";
+import { motion, useScroll } from "motion/react";
 
 type DayKey = "day1" | "day2" | "day3";
 
@@ -25,6 +26,11 @@ const ctaContent: Record<
 };
 export const DayCTA = () => {
   const [selectedDay, setSelectedDay] = useState<DayKey>("day1");
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
 
   const { text, image } = ctaContent[selectedDay];
   return (
@@ -55,8 +61,17 @@ export const DayCTA = () => {
         </div>
       </div>
 
-      <div className="max-w-[50vw] flex items-center justify-center md:justify-start col-span-2 -col-end-1 bg-orange-500">
-        <OrnamentMorph />
+      <div
+        className="relative col-span-full bg-orange-500 min-h-[300svh]"
+        ref={ref}
+      >
+        <motion.div
+          className="fixed top-4 left-4 size-8 bg-blue-500 rounded-full z-50"
+          style={{ scale: scrollYProgress }}
+        />
+        <div className="sticky top-0 h-svh bg-background">
+          <OrnamentMorph progress={scrollYProgress} className="" />
+        </div>
       </div>
     </div>
   );
