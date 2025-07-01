@@ -62,14 +62,14 @@ export const DayCTA = () => {
       </div>
 
       <div
-        className="relative col-span-full bg-orange-500 min-h-[300svh]"
+        className="relative col-span-full bg-orange-500 min-h-[800lvh]"
         ref={ref}
       >
         <motion.div
           className="fixed top-4 left-4 size-8 bg-blue-500 rounded-full z-50"
           style={{ scale: scrollYProgress }}
         />
-        <div className="sticky top-0 h-svh bg-background">
+        <div className="sticky top-0 h-lvh bg-background flex items-center">
           <OrnamentMorph progress={scrollYProgress} className="" />
         </div>
       </div>

@@ -25,18 +25,24 @@ export const OrnamentMorph = ({
     setMode((prev) => (prev >= 3 ? -1 : prev + 1));
   };
 
-  const rotate = useTransform(progress, [0.2, 0.8], [0, 360]);
+  const update = useTransform(progress, [0.1, 0.7], [-1, 3]);
+  useMotionValueEvent(update, "change", (latest) => {
+    setMode(Math.round(latest));
+  });
   return (
     <motion.svg
       viewBox="0 0 640 640"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       onClick={() => toggleMode()}
-      className={clsx(className)}
+      className={clsx(className, "max-w-160 m-auto")}
     >
       <motion.g
-        initial={{ scale: 2 }}
-        animate={{ scale: mode >= 3 ? 1 : mode >= 2 ? 1.25 : 2 }}
+        initial={{ scale: 2, y: -16 }}
+        animate={{
+          scale: mode >= 3 ? 1 : mode >= 2 ? 1.25 : 2,
+          y: mode >= 2 ? 0 : -16,
+        }}
         transition={{
           ease: "circOut",
           duration: 0.3,
