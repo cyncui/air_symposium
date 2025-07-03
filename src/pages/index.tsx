@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { LandingHero } from "@/components/Landing/LandingHero";
 import { LandingVenue } from "@/components/Landing/LandingVenue";
-import { DayCTA } from "@/components/DayCTA/DayCTA";
+import { LandingSchedule } from "@/components/Landing/LandingSchedule";
 import {
   Carousel,
   CarouselContent,
@@ -19,18 +19,7 @@ export default function Home() {
     <main>
       <LandingHero />
       <section>
-        <div className="subsection mx-auto bg-blue-500">
-          <DayCTA />
-          {/* <Carousel>
-            <CarouselContent>
-              <CarouselItem>...</CarouselItem>
-              <CarouselItem>...</CarouselItem>
-              <CarouselItem>...</CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel> */}
-        </div>
+        <LandingSchedule />
       </section>
       <section className="py-24 min-h-[300svh] flex flex-col">
         <div className="px-7.5 mx-auto my-auto">
