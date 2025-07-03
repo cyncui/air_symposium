@@ -16,14 +16,17 @@ function GridOverlay({ className, ...props }: React.ComponentProps<"div">) {
   }, []);
   return (
     <div
-      className={`fixed inset-0 pointer-events-none ${className}`}
+      className={`fixed inset-0 z-100 pointer-events-none ${className}`}
       {...props}
     >
       <div className="subsection h-full mx-auto">
         {Array.from({ length: 7 }).map((_, index) => (
           <div
             key={index}
-            className={clsx(visible ? "bg-gray-200/10" : "bg-transparent")}
+            className={clsx(
+              "h-full",
+              visible ? "bg-foreground/10" : "bg-transparent"
+            )}
           />
         ))}
       </div>
