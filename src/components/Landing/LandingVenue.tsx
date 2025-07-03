@@ -25,7 +25,7 @@ export const LandingVenue = ({
       <div className="aspect-video min-h-[320px] w-full col-span-full relative">
         <Image src={image} alt={venue} fill className="object-cover" priority />
       </div>
-      <h2 className="font-serif text-heading-2 col-span-4 sm:col-span-3 lg:col-span-2 -col-end-1 sm:-col-end-1 lg:-col-end-1">
+      <h2 className="air-heading-2 col-span-4 sm:col-span-3 lg:col-span-2 -col-end-1 sm:-col-end-1 lg:-col-end-1">
         {venue}
       </h2>
       <div className="col-span-4 sm:col-span-3 lg:col-span-2 -col-end-1 sm:-col-end-1 lg:-col-end-1">

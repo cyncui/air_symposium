@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { OrnamentMorph } from "../Ornament/OrnamentMorph";
 import { motion, useScroll } from "motion/react";
+import Link from "next/link";
 
 type DayKey = "day1" | "day2" | "day3";
 
@@ -32,21 +33,57 @@ export const LandingSchedule = () => {
   });
 
   return (
-    <div className="subsection mx-auto bg-blue-500">
+    <div className="relative subsection mx-auto bg-gradient-to-b from-yellow-500 to-blue-500 min-h-[800lvh]">
+      {/* motion handlers */}
+      <div className="absolute inset-0" ref={ref} />
       <div
-        className="relative col-span-5 col-start-2 lg:col-span-3 min-h-[800lvh]"
-        ref={ref}
-      >
-        <motion.div
-          className="fixed top-4 left-4 size-8 bg-blue-500 rounded-full z-50"
-          style={{ scale: scrollYProgress }}
-        />
-        <div className="sticky top-0 h-lvh min-h-[36rem] bg-green-500 flex items-end py-16">
+        id="test"
+        className="absolute inset-x-0 h-1/8 top-1/4 bg-gradient-to-b from-green-500 to transparent"
+      />
+      <motion.div
+        className="fixed top-4 left-4 size-8 bg-white border border-white rounded-full z-50"
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+      />
+      {/* content */}
+      <div className="sticky top-0 h-lvh min-h-[36rem] col-span-full grid grid-cols-subgrid auto-rows-min gap-y-6">
+        <div className="col-span-5 col-start-2 lg:col-span-3 bg-green-500 pt-20">
+          <h2 className="text-center">Sessions</h2>
           <OrnamentMorph
             progress={scrollYProgress}
-            className="absolute top-16 w-full"
+            className="relative w-full"
           />
-          <p className="text-center w-full">Test paragraph</p>
+        </div>
+        <nav className="bg-red-500 col-start-1 flex flex-col gap-6">
+          <Link href="#test" className="font-bold uppercase text-center">
+            <time dateTime="2025-09-16" className="flex flex-col">
+              <span className="text-xs tracking-widest">Sep</span>
+              16
+            </time>
+          </Link>
+          <Link href="#test" className="font-bold uppercase text-center">
+            <time dateTime="2025-09-17" className="flex flex-col">
+              <span className="text-xs tracking-widest">Sep</span>
+              17
+            </time>
+          </Link>
+          <Link href="#test" className="font-bold uppercase text-center">
+            <time dateTime="2025-09-18" className="flex flex-col">
+              <span className="text-xs tracking-widest">Sep</span>
+              18
+            </time>
+          </Link>
+        </nav>
+        <div className="col-span-6">
+          <article>
+            <p className="mb-2">
+              From Day 1, we gather to share knowledge from a myriad of
+              Indigenous and Asian experiences.
+            </p>
+            <p>
+              With early discussions about our communities, we unravel what
+              solidarity looks like today and tomorrow.
+            </p>
+          </article>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ export const LandingHero = () => {
         <div className="px-7.5 mx-auto my-auto">
           <div className="relative">
             <motion.h1
-              className="text-heading-1 font-serif text-center text-foreground relative"
+              className="air-heading-1 text-center text-foreground relative"
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1 }}

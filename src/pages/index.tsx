@@ -23,10 +23,10 @@ export default function Home() {
       </section>
       <section className="py-24 min-h-[300svh] flex flex-col">
         <div className="px-7.5 mx-auto my-auto">
-          <h2 className="text-center font-serif text-heading-2 relative">
+          <h2 className="text-center air-heading-2 relative">
             The Past, Present, and Future
             <span className="leading-0 h-0 relative block">
-              <span className="absolute left-1/2 top-0 -translate-1/2 font-script text-ornament text-theme-dark font-bold">
+              <span className="absolute left-1/2 top-0 -translate-1/2 air-ornament text-theme-dark font-bold">
                 of
               </span>
             </span>
