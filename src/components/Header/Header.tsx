@@ -10,13 +10,13 @@ export const Header = () => {
 
   const [scrolled, setScrolled] = useState(false);
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log("Scrolled to:", latest);
-    if (latest > 32 != scrolled) {
-      console.log("Scrolled state changed:", latest > 32);
-      setScrolled(latest > 32);
-    }
-  });
+  // useMotionValueEvent(scrollY, "change", (latest) => {
+  //   console.log("Scrolled to:", latest);
+  //   if (latest > 32 != scrolled) {
+  //     console.log("Scrolled state changed:", latest > 32);
+  //     setScrolled(latest > 32);
+  //   }
+  // });
 
   return (
     <motion.header
