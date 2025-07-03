@@ -214,16 +214,17 @@ body {
   .subsection {
     @apply px-7.5 grid grid-cols-7 gap-x-1.5;
   }
-  .air-body {
-    @apply text-body font-sans;
-  }
-  .air-heading-1 {
-    @apply text-heading-1 font-serif;
-  }
-  .air-heading-2 {
-    @apply text-heading-2 font-serif;
-  }
-  .air-ornament {
-    @apply text-ornament font-script;
-  }
+}
+
+@utility air-body {
+  @apply text-body font-sans;
+}
+@utility air-heading-1 {
+  @apply text-heading-1 font-serif;
+}
+@utility air-heading-2 {
+  @apply text-heading-2 font-serif;
+}
+@utility air-ornament {
+  @apply text-ornament font-script;
 }
