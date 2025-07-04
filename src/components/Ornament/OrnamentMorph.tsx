@@ -196,14 +196,14 @@ export const OrnamentMorph = ({
           <path
             d="M329.633 322.865C338.42 306.251 358.201 288.996 376.699 288.759"
             stroke="var(--foreground)"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M315.826 377.047C316.73 369.535 317.051 355.529 313.929 346.069"
             stroke="var(--foreground)"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M374.637 434.825C365.815 439.809 353.917 441.383 355.486 435.212C356.609 430.796 369.495 433.517 374.637 434.825Z"
@@ -272,14 +272,14 @@ export const OrnamentMorph = ({
           <path
             d="M300.5 202.5C318.531 197.197 365 200.5 386 218.5"
             stroke="#FFAAAA"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M200 374C221 365.5 231 340.5 222.5 309"
             stroke="#FFAAAA"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M290 476.081C334.5 487.081 368 455.081 368 470.081C368 477.236 317 486.581 290 476.081Z"
@@ -343,26 +343,26 @@ export const OrnamentMorph = ({
           <path
             d="M299.5 490C249 518 190 495 168.5 443.5"
             stroke="#00FF00"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M237 137C210.5 167 203.5 203.5 149 236.5"
             stroke="#00FF00"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M492.5 322.5C510.499 299.5 508.5 261 477.5 227"
             stroke="#00FF00"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M433.501 504.5C451.501 472 478.501 497 492.501 456.5"
             stroke="#00FF00"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M500 396.451C511 351.951 493.341 341 503.733 341C510.888 341 510.5 369.451 500 396.451Z"
@@ -663,14 +663,14 @@ export const OrnamentMorph = ({
           <path
             d="M376.5 181.5C346 169.5 315 150.5 315 119.5"
             stroke="#AAFFAA"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M146.999 284.5C174.999 215.545 257.499 211 291.999 159"
             stroke="#AAFFAA"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M196 419.258C146.526 429.783 141 407.66 141 422.013C141 428.859 165.982 429.305 196 419.258Z"
@@ -683,14 +683,14 @@ export const OrnamentMorph = ({
           <path
             d="M475.499 363.5C467.999 300 503.499 282 460.999 247.5"
             stroke="#AAFFAA"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M303.999 557.265C361 557.265 400 557.265 432.499 526"
             stroke="#AAFFAA"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
         </mask>
         <g mask="url(#maskTearR)">
@@ -760,20 +760,20 @@ export const OrnamentMorph = ({
           <path
             d="M462.998 190C499.999 161 387.999 119 349.999 46.0001"
             stroke="#0000FF"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M419.501 545.5C370 594 332.001 602 315.001 598"
             stroke="#0000FF"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M123.5 419.5C74.5002 389.5 69.5001 361.5 74.5002 348.5"
             stroke="#0000FF"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             d="M338 35C318 33 305.281 7.37983 313.16 8.02682C321.388 8.7025 327 26 338 35Z"
