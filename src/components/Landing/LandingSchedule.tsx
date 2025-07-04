@@ -31,6 +31,12 @@ export const LandingSchedule = () => {
     offset: ["start end", "end start"],
   });
   const insetReference = useTransform(scrollYProgress, [0.1, 0.9], [0, 1]);
+
+  const colorShift = useTransform(
+    scrollYProgress,
+    [0.1, 0.9],
+    ["#fe0000", "#facc15"]
+  );
   const inset = useMotionTemplate`inset(0 0 calc(100% - ${insetReference} * 100%) 0)`;
   const update = useTransform(scrollYProgress, [0.1, 0.7], [0, 3]);
   // const scale = useTransform(update, [1.5, 2, 2.5, 3], [2, 1.25, 1.25, 1]);
@@ -39,7 +45,10 @@ export const LandingSchedule = () => {
   });
 
   return (
-    <div className="relative subsection mx-auto min-h-[800lvh]">
+    <motion.div
+      className="relative subsection mx-auto min-h-[800lvh]"
+      style={{ background: colorShift }}
+    >
       {/* motion handlers */}
       <div className="absolute inset-0" ref={ref} />
       {items.map((_, i) => (
@@ -58,7 +67,7 @@ export const LandingSchedule = () => {
           {/* <h2 className="text-center air-heading-2 mb-4">Sessions</h2> */}
           <OrnamentMorph
             progress={scrollYProgress}
-            className="relative w-full m-auto opacity-50"
+            className="relative w-full m-auto"
           />
         </div>
         <div className="col-span-full sm:col-start-2 sm:col-span-5 lg:col-span-2 lg:-order-1 self-center grid grid-cols-[3rem_1fr] gap-4">
@@ -126,6 +135,6 @@ export const LandingSchedule = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
