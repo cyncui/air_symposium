@@ -46,18 +46,14 @@ export const LandingSchedule = () => {
         <div
           key={i}
           id={`day${i + 1}`}
-          className="absolute inset-x-0 h-1/4"
+          className="absolute inset-x-0 h-1/8"
           style={{
-            top: `${i * 25}%`,
+            top: `${(1 + 2 * i) * 12.5}%`,
           }}
         />
       ))}
-      <motion.div
-        className="fixed top-4 left-4 size-8 bg-white border border-white rounded-full z-50"
-        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
-      />
       {/* content */}
-      <div className="sticky top-0 h-lvh min-h-[36rem] col-span-full grid grid-cols-subgrid auto-rows-min gap-y-6">
+      <div className="sticky top-0 h-lvh min-h-[36rem] col-span-full grid grid-cols-subgrid grid-rows-[min-content_1fr] gap-y-4 overflow-hidden">
         <div className="col-span-5 col-start-2 lg:col-span-3 bg-green-500 pt-24">
           <h2 className="text-center air-heading-2 mb-4">Sessions</h2>
           <OrnamentMorph
@@ -66,7 +62,7 @@ export const LandingSchedule = () => {
           />
         </div>
         <div className="col-span-full grid grid-cols-[3rem_1fr] lg:grid-cols-[120px_1fr] gap-4">
-          <nav className="flex flex-col gap-6 relative">
+          <nav className="flex flex-col gap-6 sticky top-0 h-fit">
             <div className="absolute inset-y-0 left-0 w-0.5 bg-foreground/20">
               <motion.div
                 className="bg-foreground origin-top size-full"
@@ -99,16 +95,34 @@ export const LandingSchedule = () => {
             ))}
           </nav>
           <div>
-            <article>
-              <p className="mb-2">
-                From Day 1, we gather to share knowledge from a myriad of
-                Indigenous and Asian experiences.
-              </p>
-              <p>
-                With early discussions about our communities, we unravel what
-                solidarity looks like today and tomorrow.
-              </p>
-            </article>
+            <div className="bg-red-500">
+              <ul className="relative">
+                {items.map((items, i) => (
+                  <motion.li
+                    initial={{ opacity: 0 }}
+                    animate={{
+                      opacity: mode === i + 1 ? 1 : 0,
+                      y: mode === i + 1 ? 0 : 20,
+                    }}
+                    transition={{ duration: 0.3 }}
+                    key={i}
+                    className="absolute inset-0"
+                  >
+                    <article>
+                      <p className="mb-2">
+                        From Day 1, we gather to share knowledge from a myriad
+                        of Indigenous and Asian experiences.
+                      </p>
+                      <p>
+                        With early discussions about our communities, we unravel
+                        what solidarity looks like today and tomorrow.
+                      </p>
+                    </article>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+            {/* <p>Schedule coming soon</p> */}
           </div>
         </div>
       </div>
