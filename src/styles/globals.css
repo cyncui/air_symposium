@@ -212,7 +212,7 @@ body {
 
 @layer components {
   .subsection {
-    @apply px-7.5 grid grid-cols-7 gap-x-1.5;
+    @apply px-7.5 grid grid-cols-7 gap-x-1.5 max-w-[2160px] mx-auto;
   }
 }
 

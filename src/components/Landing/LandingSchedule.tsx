@@ -54,14 +54,14 @@ export const LandingSchedule = () => {
       ))}
       {/* content */}
       <div className="sticky top-0 h-lvh min-h-[36rem] col-span-full grid grid-cols-subgrid grid-rows-[min-content_min-content] place-content-center-safe gap-y-4 overflow-hidden">
-        <div className="col-span-5 col-start-2 sm:col-span-3 sm:col-start-3 ">
+        <div className="col-span-5 col-start-2 sm:col-span-3 sm:col-start-3 lg:col-start-2">
           {/* <h2 className="text-center air-heading-2 mb-4">Sessions</h2> */}
           <OrnamentMorph
             progress={scrollYProgress}
-            className="relative w-full m-auto opacity-50"
+            className="relative w-full m-auto"
           />
         </div>
-        <div className="col-span-full sm:col-start-2 sm:col-span-5 lg:col-span-2 lg:-order-1 self-center grid grid-cols-[3rem_1fr] gap-4">
+        <div className="col-span-full sm:col-start-2 sm:col-span-5 lg:col-span-2 self-center grid grid-cols-[3rem_1fr] gap-4">
           <nav className="flex flex-col gap-6 sticky top-0 h-fit">
             <div className="absolute inset-y-0 left-0 w-0.5 bg-foreground/20">
               <motion.div
