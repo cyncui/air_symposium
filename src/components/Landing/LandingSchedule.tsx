@@ -107,8 +107,13 @@ export const LandingSchedule = () => {
                   <motion.li
                     initial={{ opacity: 0 }}
                     animate={{
-                      opacity: mode === i + 1 ? 1 : 0,
-                      y: mode === i + 1 ? 0 : mode > i ? -20 : 20,
+                      opacity: mode === i + 1 || (mode === 0 && i == 0) ? 1 : 0,
+                      y:
+                        mode === i + 1 || (mode === 0 && i == 0)
+                          ? 0
+                          : mode > i
+                          ? -20
+                          : 20,
                     }}
                     transition={{ duration: 0.3 }}
                     key={i}
