@@ -121,7 +121,12 @@ export const LandingSchedule = () => {
                   >
                     <article className="lg:text-xl">
                       {items.text.map((text, j) => (
-                        <p className="mb-2 last-of-type:mb-0">{text}</p>
+                        <p
+                          className="mb-2 last-of-type:mb-0"
+                          key={`schedule-text-${i}-${j}`}
+                        >
+                          {text}
+                        </p>
                       ))}
                     </article>
                   </motion.li>
