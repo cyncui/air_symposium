@@ -1,5 +1,5 @@
 import { MobileSchedule } from "@/components/MobileSchedule/MobileSchedule";
-import { OrnamenWhale } from "@/components/Ornament/OrnamentWhale";
+import { OrnamentWhale } from "@/components/Ornament/OrnamentWhale";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
           <h2 className="text-center air-heading-2">
             The Past, Present, and Future of Braided Solidarities
           </h2>
-          <OrnamenWhale />
+          <OrnamentWhale />
           <MobileSchedule />
         </div>
       </section>

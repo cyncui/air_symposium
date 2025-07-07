@@ -26,7 +26,7 @@ const path = {
   initial: { pathLength: 0 },
   animate: { pathLength: 1, transition: { duration: 0.75, ease: easeInOut } },
 };
-export const OrnamenWhale = ({ className, ...props }: OrnamentProps) => {
+export const OrnamentWhale = ({ className, ...props }: OrnamentProps) => {
   return (
     <svg
       width="659"
@@ -34,6 +34,7 @@ export const OrnamenWhale = ({ className, ...props }: OrnamentProps) => {
       viewBox="0 0 659 1160"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <mask
         id="mask0_909_119"
