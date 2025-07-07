@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { use, useRef, useState } from "react";
 import { OrnamentMorph } from "../Ornament/OrnamentMorph";
 import {
   motion,
@@ -34,14 +34,19 @@ export const LandingSchedule = () => {
   const [mode, setMode] = useState(0);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ["start start", "end start"],
   });
-  const insetReference = useTransform(scrollYProgress, [0.1, 0.9], [0, 1]);
-  const inset = useMotionTemplate`inset(0 0 calc(100% - ${insetReference} * 100%) 0)`;
-  const update = useTransform(scrollYProgress, [0.1, 0.7], [0, 3]);
+  const insetReference = useTransform(scrollYProgress, [0.1, 0.7], [0, 1]);
+  const insetTransform = useTransform(
+    scrollYProgress,
+    [0.125, 0.25, 0.375, 0.5, 0.625, 0.75],
+    [3 / 26, 6 / 26, 13 / 26, 16 / 26, 23 / 26, 1]
+  );
+  const inset = useMotionTemplate`inset(0 0 calc(100% - ${insetTransform} * 100%) 0)`;
+  const update = useTransform(scrollYProgress, [0, 0.125, 0.625], [0, 1, 3]);
   // const scale = useTransform(update, [1.5, 2, 2.5, 3], [2, 1.25, 1.25, 1]);
   useMotionValueEvent(update, "change", (latest) => {
-    setMode(Math.floor(latest));
+    setMode(Math.round(latest));
   });
 
   return (
@@ -83,11 +88,11 @@ export const LandingSchedule = () => {
               <Link
                 key={id}
                 href={`#${id}`}
-                className="font-bold uppercase text-center"
+                className="font-bold uppercase text-center h-9 "
               >
                 <motion.time
                   dateTime={date}
-                  className="flex flex-col"
+                  className="flex flex-col leading-none"
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity:

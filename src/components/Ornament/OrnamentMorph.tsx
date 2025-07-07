@@ -21,7 +21,7 @@ export const OrnamentMorph = ({
   ...props
 }: OrnamentMorphProps) => {
   const [mode, setMode] = useState(0);
-  const update = useTransform(progress, [0.1, 0.7], [0, 3]);
+  const update = useTransform(progress, [0, 0.125, 0.625], [0, 1, 3]);
   const scale = useTransform(update, [1.5, 2, 2.5, 3], [2, 1.25, 1.25, 1]);
   useMotionValueEvent(update, "change", (latest) => {
     setMode(Math.floor(latest));
