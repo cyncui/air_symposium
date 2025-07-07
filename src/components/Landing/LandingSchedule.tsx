@@ -11,16 +11,22 @@ import Link from "next/link";
 
 const items = [
   {
-    text: "This day centres the learnings and knowledge of Indigenous and Asian communities: community organizers, activists, scholars, and members come together to share resources and skills rooted in lived experiences and grassroots organizing with academics learning and reflecting. Workshops and dialogue circles explore how we can care for each other in our movements, build power together, and pass knowledge between generations. These spaces are committed to mutual learning and solidarity, recognizing that organizing is a form of knowledge.",
-    image: "/images/day1_vector.png",
+    text: [
+      "From Day 1, we gather to share knowledge from a myriad of Indigenous and Asian experiences.",
+      "With early discussions about our communities, we unravel what solidarity looks like today and tomorrow.",
+    ],
   },
   {
-    text: "The first day of the conference will consist of various community-led sessions, where organizers will educate attendees on the struggles and experiences of Asian-Indigenous coalition building.",
-    image: "/images/day2_vector.png",
+    text: [
+      "Day 2 presents five guided dialogues on histories of Asian-Indigenous relations.",
+      "Exhibits and talks highlight researched insights across topics from housing and climate justice, to diaspora and decolonizing the arts.",
+    ],
   },
   {
-    text: "The first day of the conference will consist of various community-led sessions, where organizers will educate attendees on the struggles and experiences of Asian-Indigenous coalition building.",
-    image: "/images/day3_vector.png",
+    text: [
+      "A final day of co-creation, strengthening relationships, new and old, whether over brunch or during workshops.",
+      "Activities focus on putting new learnings into practice; creating resources to pass on knowledge.",
+    ],
   },
 ];
 export const LandingSchedule = () => {
@@ -102,21 +108,16 @@ export const LandingSchedule = () => {
                     initial={{ opacity: 0 }}
                     animate={{
                       opacity: mode === i + 1 ? 1 : 0,
-                      y: mode === i + 1 ? 0 : 20,
+                      y: mode === i + 1 ? 0 : mode > i ? -20 : 20,
                     }}
                     transition={{ duration: 0.3 }}
                     key={i}
                     className="absolute inset-0"
                   >
                     <article className="lg:text-xl">
-                      <p className="mb-2">
-                        From Day 1, we gather to share knowledge from a myriad
-                        of Indigenous and Asian experiences.
-                      </p>
-                      <p>
-                        With early discussions about our communities, we unravel
-                        what solidarity looks like today and tomorrow.
-                      </p>
+                      {items.text.map((text, j) => (
+                        <p className="mb-2 last-of-type:mb-0">{text}</p>
+                      ))}
                     </article>
                   </motion.li>
                 ))}
