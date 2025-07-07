@@ -24,7 +24,7 @@ export const OrnamentMorph = ({
   const update = useTransform(progress, [0, 0.125, 0.625], [0, 1, 3]);
   const scale = useTransform(update, [1.5, 2, 2.5, 3], [2, 1.25, 1.25, 1]);
   useMotionValueEvent(update, "change", (latest) => {
-    setMode(Math.floor(latest));
+    setMode(Math.round(latest));
   });
   const ref = useRef(null);
   const isInView = useInView(ref, {
