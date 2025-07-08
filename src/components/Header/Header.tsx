@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { motion, useScroll, useMotionValueEvent } from "motion/react";
+import { motion, useScroll } from "motion/react";
 import Image from "next/image";
 
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const Header = () => {
   const { scrollY } = useScroll();

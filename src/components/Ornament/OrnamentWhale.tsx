@@ -1,4 +1,4 @@
-import { easeInOut, motion, MotionConfig, useInView } from "motion/react";
+import { easeInOut, motion, useInView } from "motion/react";
 import { useRef } from "react";
 interface OrnamentProps extends React.SVGProps<SVGSVGElement> {
   //   className?: string;
@@ -27,7 +27,7 @@ const path = {
   initial: { pathLength: 0 },
   animate: { pathLength: 1, transition: { duration: 0.5, ease: easeInOut } },
 };
-export const OrnamentWhale = ({ className, ...props }: OrnamentProps) => {
+export const OrnamentWhale = ({ className }: OrnamentProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,

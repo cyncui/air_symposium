@@ -1,4 +1,4 @@
-import { use, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { OrnamentMorph } from "../Ornament/OrnamentMorph";
 import {
   motion,
@@ -54,7 +54,6 @@ export const LandingSchedule = () => {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const insetReference = useTransform(scrollYProgress, [0.1, 0.7], [0, 1]);
   const insetTransform = useTransform(
     scrollYProgress,
     [0.125, 0.25, 0.375, 0.5, 0.625, 0.75],

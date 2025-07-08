@@ -1,15 +1,6 @@
-import Image from "next/image";
 import { LandingHero } from "@/components/Landing/LandingHero";
 import { LandingVenue } from "@/components/Landing/LandingVenue";
 import { LandingSchedule } from "@/components/Landing/LandingSchedule";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
 import { Fragment } from "react";
 import { OrnamentSM } from "@/components/Ornament/OrnamentSM";
 import { OrnamentMD } from "@/components/Ornament/OrnamentMD";

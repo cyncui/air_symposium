@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { easeInOut, easeOut, motion, MotionConfig } from "motion/react";
+import { easeInOut, motion } from "motion/react";
 interface OrnamentProps extends React.SVGProps<SVGSVGElement> {
   //   className?: string;
 }
