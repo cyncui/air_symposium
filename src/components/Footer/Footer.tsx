@@ -14,7 +14,7 @@ export const Footer = () => {
           >
             hello@asianindigenous
             <wbr />
-            relations.ca
+            relations.ca{" "}
             <Arrow className="inline-flex size-[1em] -translate-x-1/5 fill-inherit" />
           </a>
           <hr className="border-t border-[#FA4A23]" />

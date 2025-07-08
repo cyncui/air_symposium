@@ -37,7 +37,7 @@ export const LandingVenue = ({
             rel="noopener noreferrer"
             className="not-italic font-bold inline-flex items-center-safe group hover:text-theme-dark hover:fill-theme-dark focus:text-theme-dark focus:fill-theme-dark fill-foreground not-focus:transition-colors"
           >
-            {address}
+            {address}{" "}
             <Arrow className="inline-flex size-[1em] fill-inherit" />
           </a>
         </address>
