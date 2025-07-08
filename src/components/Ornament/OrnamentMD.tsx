@@ -1,4 +1,5 @@
-import { easeInOut, motion, MotionConfig } from "motion/react";
+import { easeInOut, motion, MotionConfig, useInView } from "motion/react";
+import { useRef } from "react";
 interface OrnamentProps extends React.SVGProps<SVGSVGElement> {
   //   className?: string;
 }
@@ -8,7 +9,7 @@ const container = {
   animate: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.025,
     },
   },
 };
@@ -18,18 +19,23 @@ const item = {
   animate: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: easeInOut },
+    transition: { duration: 0.3, ease: easeInOut },
   },
 };
 
 const path = {
   initial: { pathLength: 0 },
-  animate: { pathLength: 1, transition: { duration: 0.75, ease: easeInOut } },
+  animate: { pathLength: 1, transition: { duration: 0.5, ease: easeInOut } },
 };
 
 export const OrnamentMD = ({ className, ...props }: OrnamentProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+  });
   return (
     <svg
+      ref={ref}
       viewBox="0 0 410 530"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +117,7 @@ export const OrnamentMD = ({ className, ...props }: OrnamentProps) => {
         mask="url(#mask0_1238_129)"
         variants={container}
         initial="initial"
-        animate="animate"
+        animate={isInView ? "animate" : "initial"}
       >
         <motion.path
           d="M379.535 0.326416C382.641 14.4913 388.445 49.6962 385.83 74.4084C383.215 99.1206 381.016 109.26 377.239 114.728C372.009 122.301 352.665 141.155 339.5 134C316.5 121.5 336.5 97 348.287 90.1813"
@@ -210,7 +216,11 @@ export const OrnamentMD = ({ className, ...props }: OrnamentProps) => {
           variants={path}
         />
       </motion.g>
-      <motion.g variants={container} initial="initial" animate="animate">
+      <motion.g
+        variants={container}
+        initial="initial"
+        animate={isInView ? "animate" : "initial"}
+      >
         <motion.path
           d="M256.738 421.731C256.987 418.043 261.673 415.355 267.206 415.727C272.739 416.1 277.023 419.392 276.774 423.081C276.526 426.769 271.839 429.457 266.307 429.085C260.774 428.712 256.49 425.42 256.738 421.731Z"
           fill="#F6EEDD"

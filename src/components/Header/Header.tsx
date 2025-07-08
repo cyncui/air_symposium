@@ -10,33 +10,30 @@ export const Header = () => {
 
   const [scrolled, setScrolled] = useState(false);
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log("Scrolled to:", latest);
-    if (latest > 32 != scrolled) {
-      console.log("Scrolled state changed:", latest > 32);
-      setScrolled(latest > 32);
-    }
-  });
+  // useMotionValueEvent(scrollY, "change", (latest) => {
+  //   console.log("Scrolled to:", latest);
+  //   if (latest > 32 != scrolled) {
+  //     console.log("Scrolled state changed:", latest > 32);
+  //     setScrolled(latest > 32);
+  //   }
+  // });
 
   return (
     <motion.header
       className={clsx(
-        "sticky inset-x-0 top-0 z-50 font-serif bg-gradient-to-b from-background to-transparent"
+        "inset-x-0 fixed top-0 z-50 font-serif bg-gradient-to-b from-background to-transparent"
       )}
     >
-      <nav className="py-4 px-7.5 mx-auto flex justify-between items-center">
-        <Link href="/">
-          <Image
-            src="/svgs/knot_sm.svg"
-            alt=""
-            width={64}
-            height={64}
-            className=""
-          />
+      <nav className="py-4 px-7.5 max-w-[2160px] mx-auto flex justify-between items-center">
+        <Link
+          href="/"
+          className="hover:scale-110 hover:-rotate-5 ease-[cubic-bezier(0.34,1.86,0.64,1)] duration-500 transition-transform"
+        >
+          <Image src="/svgs/knot_sm.svg" alt="" width={64} height={64} />
         </Link>
-        <menu className="flex gap-8 justify-end">
+        {/* <menu className="flex gap-8 justify-end">
           <LinkItem href="/schedule">Schedule</LinkItem>
-        </menu>
+        </menu> */}
       </nav>
     </motion.header>
   );

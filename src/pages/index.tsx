@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { LandingHero } from "@/components/Landing/LandingHero";
 import { LandingVenue } from "@/components/Landing/LandingVenue";
-import { DayCTA } from "@/components/DayCTA/DayCTA";  
+import { LandingSchedule } from "@/components/Landing/LandingSchedule";
 import {
   Carousel,
   CarouselContent,
@@ -13,26 +13,32 @@ import { Button } from "@/components/ui/button";
 import { Fragment } from "react";
 import { OrnamentSM } from "@/components/Ornament/OrnamentSM";
 import { OrnamentMD } from "@/components/Ornament/OrnamentMD";
+import { OrnamentWhale } from "@/components/Ornament/OrnamentWhale";
+import { OrnamentLG } from "@/components/Ornament/OrnamentLG";
+import { OrnamentLG2 } from "@/components/Ornament/OrnamentLG2";
 
 export default function Home() {
   return (
     <main>
       <LandingHero />
-      <section className="py-24 min-h-[300svh] flex flex-col">
+      <section className="py-24 flex flex-col gap-24">
         <div className="px-7.5 mx-auto my-auto">
-          <h2 className="text-center font-serif text-heading-2 relative">
+          <h2 className="text-center air-heading-2 relative">
             The Past, Present, and Future
             <span className="leading-0 h-0 relative block">
-              <span className="absolute left-1/2 top-0 -translate-1/2 font-script text-ornament text-theme-dark font-bold">
+              <span className="absolute left-1/2 top-0 -translate-1/2 air-ornament text-theme-dark font-bold">
                 of
               </span>
             </span>
             Braided Solidarities
           </h2>
         </div>
+        <OrnamentLG className="w-60 mx-auto" />
+        <OrnamentWhale className="w-100 mx-auto" />
+        <OrnamentLG2 className="w-80 mx-auto" />
       </section>
       <section>
-        <div className="section__hz mx-auto">
+        <div className="subsection mx-auto">
           {[
             {
               date: "September 19",
@@ -65,22 +71,10 @@ export default function Home() {
         </div>
       </section>
       <div className="col-span-full">
-        <OrnamentMD className="mx-auto w-60" />
+        <OrnamentMD className="mx-auto my-12 w-60" />
       </div>
       <section>
-        <div className="px-7.5 mx-auto">
-            <DayCTA 
-            />
-          {/* <Carousel>
-            <CarouselContent>
-              <CarouselItem>...</CarouselItem>
-              <CarouselItem>...</CarouselItem>
-              <CarouselItem>...</CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel> */}
-        </div>
+        <LandingSchedule />
       </section>
     </main>
   );

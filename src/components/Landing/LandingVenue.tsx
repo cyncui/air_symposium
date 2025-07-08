@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Arrow from "@/assets/icons/icon_arrow-top-right.svg";
 
 export const LandingVenue = ({
   date,
@@ -25,7 +26,7 @@ export const LandingVenue = ({
       <div className="aspect-video min-h-[320px] w-full col-span-full relative">
         <Image src={image} alt={venue} fill className="object-cover" priority />
       </div>
-      <h2 className="font-serif text-heading-2 col-span-4 sm:col-span-3 lg:col-span-2 -col-end-1 sm:-col-end-1 lg:-col-end-1">
+      <h2 className="air-heading-2 col-span-4 sm:col-span-3 lg:col-span-2 -col-end-1 sm:-col-end-1 lg:-col-end-1">
         {venue}
       </h2>
       <div className="col-span-4 sm:col-span-3 lg:col-span-2 -col-end-1 sm:-col-end-1 lg:-col-end-1">
@@ -34,9 +35,10 @@ export const LandingVenue = ({
             href={mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="not-italic"
+            className="not-italic font-bold inline-flex items-center-safe group hover:text-theme-dark hover:fill-theme-dark focus:text-theme-dark focus:fill-theme-dark fill-foreground not-focus:transition-colors"
           >
             {address}
+            <Arrow className="inline-flex size-[1em] fill-inherit" />
           </a>
         </address>
         <time dateTime={dateTime}>{time}</time>
