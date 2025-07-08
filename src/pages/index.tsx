@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </section>
       <div className="col-span-full">
-        <OrnamentMD className="mx-auto w-60" />
+        <OrnamentMD className="mx-auto my-12 w-60" />
       </div>
       <section>
         <LandingSchedule />

@@ -1,4 +1,5 @@
-import { easeInOut, motion, MotionConfig } from "motion/react";
+import { easeInOut, motion, MotionConfig, useInView } from "motion/react";
+import { useRef } from "react";
 interface OrnamentProps extends React.SVGProps<SVGSVGElement> {
   //   className?: string;
 }
@@ -28,8 +29,13 @@ const path = {
 };
 
 export const OrnamentSM = ({ className, ...props }: OrnamentProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+  });
   return (
     <svg
+      ref={ref}
       viewBox="0 0 230 303"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +83,7 @@ export const OrnamentSM = ({ className, ...props }: OrnamentProps) => {
         mask="url(#mask0_1238_215)"
         variants={container}
         initial="initial"
-        animate="animate"
+        animate={isInView ? "animate" : "initial"}
       >
         <motion.path
           d="M0.885742 18.2466C26.7764 24.9543 74.3599 44.926 54.5 86C39.2165 111.092 12.5 92 12.5 64.5"
@@ -123,7 +129,11 @@ export const OrnamentSM = ({ className, ...props }: OrnamentProps) => {
           variants={path}
         />
       </motion.g>
-      <motion.g variants={container} initial="initial" animate="animate">
+      <motion.g
+        variants={container}
+        initial="initial"
+        animate={isInView ? "animate" : "initial"}
+      >
         <motion.path
           d="M199.066 258.002C199.52 256.74 201.935 256.453 204.459 257.361C206.983 258.268 208.662 260.027 208.209 261.289C207.755 262.551 205.34 262.84 202.815 261.932C200.291 261.024 198.613 259.264 199.066 258.002Z"
           fill="#F6EEDD"
