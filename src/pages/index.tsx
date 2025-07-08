@@ -34,7 +34,7 @@ export default function Home() {
           </h2>
         </div>
         <OrnamentLG className="w-60 mx-auto" />
-        <OrnamentWhale className="w-100 mx-auto" />
+        <OrnamentWhale className="w-100 mx-auto max-w-full" />
         <OrnamentLG2 className="w-80 mx-auto" />
       </section>
       <section>
