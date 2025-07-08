@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main>
       <LandingHero />
-      <section className="py-24 flex flex-col gap-24">
+      <section className="py-24 flex flex-col gap-12 sm:gap-24">
         <div className="px-7.5 mx-auto my-auto">
           <h2 className="text-center air-heading-2 relative">
             The Past, Present, and Future
@@ -33,9 +33,9 @@ export default function Home() {
             Braided Solidarities
           </h2>
         </div>
-        <OrnamentLG className="w-60 mx-auto" />
-        <OrnamentWhale className="w-100 mx-auto max-w-full" />
-        <OrnamentLG2 className="w-80 mx-auto" />
+        <OrnamentLG className="w-40 sm:w-60 mx-auto" />
+        <OrnamentWhale className="w-80 sm:w-100 mx-auto max-w-full" />
+        <OrnamentLG2 className="w-60 sm:w-80 mx-auto" />
       </section>
       <section>
         <div className="subsection mx-auto">
@@ -63,7 +63,7 @@ export default function Home() {
               <LandingVenue {...location} />
               {idx < 1 && (
                 <div className="col-span-full">
-                  <OrnamentSM className="mx-auto my-12 w-30" />
+                  <OrnamentSM className="mx-auto my-12 w-20 sm:w-30" />
                 </div>
               )}
             </Fragment>
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
       </section>
       <div className="col-span-full">
-        <OrnamentMD className="mx-auto my-12 w-60" />
+        <OrnamentMD className="mx-auto my-12 w-40 sm:w-60" />
       </div>
       <section>
         <LandingSchedule />
