@@ -12,20 +12,38 @@ import Link from "next/link";
 const items = [
   {
     text: [
-      "From Day 1, we gather to share knowledge from a myriad of Indigenous and Asian experiences.",
-      "With early discussions about our communities, we unravel what solidarity looks like today and tomorrow.",
+      <>
+        From Day 1, we gather to share knowledge from a myriad of Indigenous and
+        Asian experiences.
+      </>,
+      <>
+        With <strong>early discussions about our communities</strong>, we
+        unravel what solidarity looks like today and tomorrow.
+      </>,
     ],
   },
   {
     text: [
-      "Day 2 presents five guided dialogues on histories of Asian-Indigenous relations.",
-      "Exhibits and talks highlight researched insights across topics from housing and climate justice, to diaspora and decolonizing the arts.",
+      <>
+        Day 2 presents <strong>five guided dialogues</strong> on histories of
+        Asian-Indigenous relations.
+      </>,
+      <>
+        Exhibits and talks highlight researched insights across topics from
+        housing and climate justice, to diaspora and decolonizing the arts.
+      </>,
     ],
   },
   {
     text: [
-      "A final day of co-creation, strengthening relationships, new and old, whether over brunch or during workshops.",
-      "Activities focus on putting new learnings into practice; creating resources to pass on knowledge.",
+      <>
+        <strong>A final day of co-creation</strong>, strengthening
+        relationships, new and old, whether over brunch or during workshops.
+      </>,
+      <>
+        Activities focus on putting new learnings into practice; creating
+        resources to pass on knowledge.
+      </>,
     ],
   },
 ];
@@ -64,7 +82,7 @@ export const LandingSchedule = () => {
         />
       ))}
       {/* content */}
-      <div className="sticky top-0 h-lvh min-h-[36rem] col-span-full grid grid-cols-subgrid grid-rows-[min-content_min-content] place-content-center-safe gap-y-4 overflow-hidden">
+      <div className="sticky top-0 h-lvh min-h-[36rem] col-span-full grid grid-cols-subgrid grid-rows-[min-content_min-content] place-content-center-safe gap-y-9 overflow-hidden">
         <div className="col-span-5 col-start-2 sm:col-span-3 sm:col-start-3 lg:col-start-2">
           {/* <h2 className="text-center air-heading-2 mb-4">Sessions</h2> */}
           <OrnamentMorph
@@ -72,7 +90,7 @@ export const LandingSchedule = () => {
             className="relative w-full m-auto"
           />
         </div>
-        <div className="col-span-full xs:col-start-2 xs:col-span-5 sm:col-start-3 sm:col-span-3 lg:col-span-2 self-center grid grid-cols-[3rem_1fr] gap-4">
+        <div className="col-span-full xs:col-start-2 xs:col-span-5 sm:col-start-3 sm:col-span-3 lg:col-span-2 self-center grid grid-cols-[3rem_1fr] gap-1.5">
           <nav className="flex flex-col gap-6 sticky top-0 h-fit">
             <div className="absolute inset-y-0 left-0 w-0.5 bg-foreground/20">
               <motion.div
@@ -88,7 +106,7 @@ export const LandingSchedule = () => {
               <Link
                 key={id}
                 href={`#${id}`}
-                className="font-bold uppercase text-center h-9 "
+                className="font-bold uppercase text-center h-9"
               >
                 <motion.time
                   dateTime={date}
@@ -106,7 +124,7 @@ export const LandingSchedule = () => {
             ))}
           </nav>
           <div>
-            <div className="bg-red-500">
+            <div>
               <ul className="relative">
                 {items.map((items, i) => (
                   <motion.li
