@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Arrow from "@/assets/icons/icon_arrow-top-right.svg";
 
 export const LandingVenue = ({
   date,
@@ -34,9 +35,10 @@ export const LandingVenue = ({
             href={mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="not-italic"
+            className="not-italic font-bold inline-flex items-center-safe group hover:text-theme-dark hover:fill-theme-dark focus:text-theme-dark focus:fill-theme-dark fill-foreground not-focus:transition-colors"
           >
             {address}
+            <Arrow className="inline-flex size-[1em] fill-inherit" />
           </a>
         </address>
         <time dateTime={dateTime}>{time}</time>

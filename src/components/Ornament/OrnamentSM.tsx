@@ -9,7 +9,7 @@ const container = {
   animate: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.05,
     },
   },
 };
@@ -19,13 +19,13 @@ const item = {
   animate: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: easeInOut },
+    transition: { duration: 0.3, ease: easeInOut },
   },
 };
 
 const path = {
   initial: { pathLength: 0 },
-  animate: { pathLength: 1, transition: { duration: 0.75, ease: easeInOut } },
+  animate: { pathLength: 1, transition: { duration: 0.5, ease: easeInOut } },
 };
 
 export const OrnamentSM = ({ className, ...props }: OrnamentProps) => {
