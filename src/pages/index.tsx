@@ -13,12 +13,15 @@ import { Button } from "@/components/ui/button";
 import { Fragment } from "react";
 import { OrnamentSM } from "@/components/Ornament/OrnamentSM";
 import { OrnamentMD } from "@/components/Ornament/OrnamentMD";
+import { OrnamentWhale } from "@/components/Ornament/OrnamentWhale";
+import { OrnamentLG } from "@/components/Ornament/OrnamentLG";
+import { OrnamentLG2 } from "@/components/Ornament/OrnamentLG2";
 
 export default function Home() {
   return (
     <main>
       <LandingHero />
-      <section className="py-24 min-h-[300svh] flex flex-col">
+      <section className="py-24 flex flex-col gap-24">
         <div className="px-7.5 mx-auto my-auto">
           <h2 className="text-center air-heading-2 relative">
             The Past, Present, and Future
@@ -30,6 +33,9 @@ export default function Home() {
             Braided Solidarities
           </h2>
         </div>
+        <OrnamentLG className="w-60 mx-auto" />
+        <OrnamentWhale className="w-100 mx-auto" />
+        <OrnamentLG2 className="w-80 mx-auto" />
       </section>
       <section>
         <div className="subsection mx-auto">

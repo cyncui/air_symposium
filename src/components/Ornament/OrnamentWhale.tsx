@@ -1,4 +1,5 @@
-import { easeInOut, motion, MotionConfig } from "motion/react";
+import { easeInOut, motion, MotionConfig, useInView } from "motion/react";
+import { useRef } from "react";
 interface OrnamentProps extends React.SVGProps<SVGSVGElement> {
   //   className?: string;
 }
@@ -18,23 +19,26 @@ const item = {
   animate: {
     opacity: 1,
     scale: 1,
-    transition: { staggerChildren: 0.1,   },
+    transition: { staggerChildren: 0.05 },
   },
 };
 
 const path = {
   initial: { pathLength: 0 },
-  animate: { pathLength: 1, transition: { duration: 0.75, ease: easeInOut } },
+  animate: { pathLength: 1, transition: { duration: 0.5, ease: easeInOut } },
 };
 export const OrnamentWhale = ({ className, ...props }: OrnamentProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+  });
   return (
     <svg
-      width="659"
-      height="1160"
       viewBox="0 0 659 1160"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      ref={ref}
     >
       <mask
         id="mask0_909_119"
@@ -270,7 +274,7 @@ export const OrnamentWhale = ({ className, ...props }: OrnamentProps) => {
         mask="url(#mask0_909_119)"
         variants={container}
         initial="initial"
-        animate="animate"
+        animate={isInView ? "animate" : "initial"}
       >
         <motion.path
           d="M168.56 95.9217L93.2124 77.5368C79.6793 75.192 52.6579 74.5956 47.4693 91.8072C45.561 98.1371 45.5506 98.9238 45.0637 102.901C43.937 112.105 44.455 116.452 44.7408 118.701C45.5449 125.401 52.4935 140.485 68.8939 147.881C85.2943 155.278 97.2998 159.003 101.252 159.94C110.967 161.414 135.902 163.277 157.93 158.936C179.958 154.594 202.482 150.561 210.99 149.087C223.049 147.278 248.896 144.505 255.81 147.881"
@@ -501,7 +505,11 @@ export const OrnamentWhale = ({ className, ...props }: OrnamentProps) => {
           variants={path}
         />
       </motion.g>
-      <motion.g variants={item} initial="initial" animate="animate">
+      <motion.g
+        variants={container}
+        initial="initial"
+        animate={isInView ? "animate" : "initial"}
+      >
         <motion.path
           d="M94.0827 104.095C101.982 104.192 108.158 105.59 113.977 109.101C122.494 114.237 122.917 123.534 114.172 128.507C110.694 130.49 106.403 131.401 102.34 131.921C96.4883 132.668 90.6044 132.181 85.0132 130.003C79.0644 127.662 75.4561 122.656 75.4561 117.162C75.4561 113.294 77.3415 110.498 80.3321 108.353C84.8181 105.167 89.8568 103.802 94.0827 104.095Z"
           fill="var(--foreground)"
