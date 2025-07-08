@@ -215,6 +215,9 @@ body {
   .subsection {
     @apply px-7.5 grid grid-cols-7 gap-x-1.5 max-w-[2160px] mx-auto;
   }
+  .link {
+    @apply hover:text-theme-dark focus:text-theme-dark not-focus:transition-colors;
+  }
 }
 
 @utility air-body {

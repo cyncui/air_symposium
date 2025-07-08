@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="bg-stone-100 text-background py-7.5 px-7.5">
       <div className="mb-6">
         <a
-          className="inline-block items-center-safe text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl mb-6 group hover:text-theme-dark hover:fill-theme-dark fill-background transition-colors "
+          className="inline-block items-center-safe text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl mb-6 group hover:text-theme-dark hover:fill-theme-dark focus:text-theme-dark focus:fill-theme-dark fill-background not-focus:transition-colors"
           href="mailto:hello@asianindigenousrelations.ca"
           target="_blank"
           rel="noopener noreferrer"
@@ -34,30 +34,46 @@ export const Footer = () => {
           <p className="mb-4">
             This site was created by{" "}
             <a
-              className="underline"
+              className="underline link"
               href="https://www.linkedin.com/in/marcangelocastro/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Marc Castro
             </a>
             ,{" "}
-            <a className="underline" href="https://cynth.cafe">
+            <a
+              className="underline link"
+              href="https://cynth.cafe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Cynthia Cui
             </a>
             ,{" "}
             <a
-              className="underline"
+              className="underline link"
               href="https://www.linkedin.com/in/jeffrey-su-550736223/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Jeffrey Su
             </a>
             ,{" "}
-            <a className="underline" href="https://xiaolanyaya.framer.website/">
+            <a
+              className="underline link"
+              href="https://xiaolanyaya.framer.website/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Yaya Zheng
             </a>
             , and{" "}
             <a
-              className="underline"
+              className="underline link"
               href="https://www.linkedin.com/in/nathan-lew/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Nathan Lew
             </a>
@@ -76,14 +92,24 @@ export const Footer = () => {
             places, both offline and online. Land back!
           </p>
           <p>
-            <a href="https://asianindigenousrelations.ca" className="underline">
+            <a
+              href="https://asianindigenousrelations.ca"
+              className="underline link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               asianindigenousrelations.ca
             </a>
           </p>
         </div>
       </div>
       <div className="flex gap-2">
-        <a href="https://asianindigenousrelations.ca" target="_blank">
+        <a
+          href="https://asianindigenousrelations.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-transform hover:scale-110"
+        >
           <Logo />
         </a>
         <span className="font-serif text-2xl opacity-50">
