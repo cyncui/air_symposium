@@ -3,7 +3,7 @@ import {
   OrnamentFlourishA,
   OrnamentFlourishB,
 } from "../Ornament/OrnamentFlourish";
-import { motion } from "motion/react";
+import { backOut, motion } from "motion/react";
 
 export const LandingHero = () => {
   return (
@@ -20,10 +20,10 @@ export const LandingHero = () => {
               Asian-Indigenous Symposium
             </motion.h1>
             <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 0 }}
-              animate={{ opacity: 1, scale: 1, y: -8 }}
-              transition={{ duration: 1 }}
-              className="absolute top-0 -translate-y-full md:-translate-y-9/10 lg:-translate-y-4/5 left-1/2 -translate-x-1/2 origin-bottom"
+              initial={{ opacity: 0, scale: 0.9, y: 0, rotate: 15 }}
+              animate={{ opacity: 1, scale: 1, y: -8, rotate: 0 }}
+              transition={{ duration: 1, ease: backOut }}
+              className="absolute top-0 -translate-y-full md:-translate-y-4/5 left-1/2 -translate-x-1/2 origin-bottom"
             >
               <Image
                 src="/svgs/knot_top.svg"
@@ -33,9 +33,9 @@ export const LandingHero = () => {
               />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 0 }}
-              animate={{ opacity: 1, scale: 1, y: 8 }}
-              transition={{ duration: 1 }}
+              initial={{ opacity: 0, scale: 0.9, y: 0, rotate: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 8, rotate: 0 }}
+              transition={{ duration: 1, ease: backOut }}
               className="absolute bottom-0 translate-y-full md:translate-y-9/10 lg:translate-y-9/10 left-1/2 -translate-x-1/2 origin-top"
             >
               <Image

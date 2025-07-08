@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { easeInOut, motion, MotionConfig } from "motion/react";
+import { easeInOut, easeOut, motion, MotionConfig } from "motion/react";
 interface OrnamentProps extends React.SVGProps<SVGSVGElement> {
   //   className?: string;
 }
@@ -30,12 +30,14 @@ const path = {
 
 export const OrnamentFlourishA = ({ className, ...props }: OrnamentProps) => {
   return (
-    <svg
+    <motion.svg
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={clsx(className, "w-75")}
-      {...props}
+      className={clsx(className, "w-75 origin-bottom-left")}
+      initial={{ opacity: 0, scale: 0.8, rotateZ: -22.5 }}
+      animate={{ opacity: 1, scale: 1, rotateZ: 0 }}
+      transition={{ duration: 1, ease: "backOut" }}
     >
       <mask
         id="mask0_1238_229"
@@ -145,18 +147,20 @@ export const OrnamentFlourishA = ({ className, ...props }: OrnamentProps) => {
           variants={item}
         />
       </motion.g>
-    </svg>
+    </motion.svg>
   );
 };
 
 export const OrnamentFlourishB = ({ className, ...props }: OrnamentProps) => {
   return (
-    <svg
+    <motion.svg
       viewBox="0 0 428 453"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={clsx(className, "w-80")}
-      {...props}
+      className={clsx(className, "w-80 origin-top-right")}
+      initial={{ opacity: 0, scale: 0.8, rotateZ: 15 }}
+      animate={{ opacity: 1, scale: 1, rotateZ: 0 }}
+      transition={{ duration: 1, ease: "backOut" }}
     >
       <mask
         id="mask0_1238_242"
@@ -330,6 +334,6 @@ export const OrnamentFlourishB = ({ className, ...props }: OrnamentProps) => {
           variants={item}
         />
       </motion.g>
-    </svg>
+    </motion.svg>
   );
 };

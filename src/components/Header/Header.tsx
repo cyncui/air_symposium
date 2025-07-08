@@ -25,14 +25,11 @@ export const Header = () => {
       )}
     >
       <nav className="py-4 px-7.5 max-w-[2160px] mx-auto flex justify-between items-center">
-        <Link href="/">
-          <Image
-            src="/svgs/knot_sm.svg"
-            alt=""
-            width={64}
-            height={64}
-            className=""
-          />
+        <Link
+          href="/"
+          className="hover:scale-110 hover:-rotate-5 ease-[cubic-bezier(0.34,1.86,0.64,1)] duration-500 transition-transform"
+        >
+          <Image src="/svgs/knot_sm.svg" alt="" width={64} height={64} />
         </Link>
         {/* <menu className="flex gap-8 justify-end">
           <LinkItem href="/schedule">Schedule</LinkItem>
