@@ -110,79 +110,79 @@ export const OrnamentLG = ({ className, ...props }: OrnamentProps) => {
           variants={path}
           d="M62.5 -9C77.6191 -4.25676 124.127 35.787 156.5 145C188.873 254.213 219.308 254.342 232.5 237C237.095 230.033 240.102 208.701 211 199"
           stroke="var(--foreground)"
-          stroke-width="24"
+          strokeWidth="24"
         />
         <motion.path
           variants={path}
           d="M135.2 193.308C141.726 220.459 149.001 283.502 124.67 314.545C98.0576 348.5 66.4801 284.878 91.9999 266"
           stroke="var(--foreground)"
-          stroke-width="31"
+          strokeWidth="31"
         />
         <motion.path
           variants={path}
           d="M67.499 318.202C68.7004 328.388 80.9855 351 101.627 344.479"
           stroke="var(--foreground)"
-          stroke-width="10"
+          strokeWidth="10"
         />
         <motion.path
           variants={path}
           d="M170.605 244.672C175.635 250.479 187.756 272.334 186.869 304.358C185.759 344.387 184.095 353.359 189.088 375.548C194.08 397.737 200.552 415.858 212.201 426.028C223.851 436.198 257.504 434.904 267.12 410.866C268.537 408.092 270.177 392.757 265 379"
           stroke="var(--foreground)"
-          stroke-width="31"
+          strokeWidth="31"
         />
         <motion.path
           variants={path}
           d="M143.897 174.5C156.113 212.771 161.237 285.942 143.897 341.463C140.751 355.26 131.382 389.537 119.077 416.275C109.004 438.161 28.5024 510.676 22.9995 447C21.0419 424.347 32.0126 418.564 39.538 415.301"
           stroke="var(--foreground)"
-          stroke-width="19"
+          strokeWidth="19"
         />
         <motion.path
           variants={path}
           d="M243.888 449.288C257.66 449.288 285.631 437.537 284.447 409.579"
           stroke="var(--foreground)"
-          stroke-width="8"
+          strokeWidth="8"
         />
         <motion.path
           variants={path}
           d="M130 426C128.064 432.13 116.47 448.706 100.983 460.837C85.4961 472.969 80.3338 489.552 79.6885 496.328C79.2583 501.813 80.6565 513.428 89.6905 516.009C98.7245 518.59 107.436 512.353 110.662 508.911C111.63 508.373 114.016 502.485 113.5 495"
           stroke="var(--foreground)"
-          stroke-width="19"
+          strokeWidth="19"
         />
         <motion.path
           variants={path}
           d="M68.5007 492.5C66.1346 496.909 64 513.5 76.0006 523"
           stroke="var(--foreground)"
-          stroke-width="7"
+          strokeWidth="7"
         />
         <motion.path
           variants={path}
           d="M143.896 174.5C156.112 212.771 161.236 285.942 143.896 341.463C140.75 355.26 131.381 389.537 119.076 416.275C109.003 438.161 18.9481 514.353 10.5003 451C7.5 428.5 32.0114 418.564 39.5368 415.301"
           stroke="var(--foreground)"
-          stroke-width="19"
+          strokeWidth="19"
         />
         <motion.path
           variants={path}
           d="M26.5 13.5C52.3157 31.7861 107.039 66.9431 105.5 100.5C102.636 162.945 43.5 126 75 93.5"
           stroke="var(--foreground)"
-          stroke-width="31"
+          strokeWidth="31"
         />
         <motion.path
           variants={path}
           d="M241 203.5C249.558 211.162 266.7 233.2 244.5 248"
           stroke="var(--foreground)"
-          stroke-width="8"
+          strokeWidth="8"
         />
         <motion.path
           variants={path}
           d="M58.5 12.5C73.0281 17.0229 83 30.5 94.5 41"
           stroke="var(--foreground)"
-          stroke-width="7"
+          strokeWidth="7"
         />
         <motion.path
           variants={path}
           d="M124 119C128 132 139.896 156.207 131.5 173"
           stroke="var(--foreground)"
-          stroke-width="20"
+          strokeWidth="20"
         />
       </motion.g>
       <motion.g
