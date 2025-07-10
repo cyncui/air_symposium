@@ -9,7 +9,7 @@ const container = {
   animate: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.05,
+      staggerChildren: 0.035,
     },
   },
 };
@@ -19,7 +19,7 @@ const item = {
   animate: {
     opacity: 1,
     scale: 1,
-    transition: { staggerChildren: 0.05 },
+    transition: { staggerChildren: 0.08 },
   },
 };
 
@@ -506,7 +506,7 @@ export const OrnamentWhale = ({ className }: OrnamentProps) => {
         />
       </motion.g>
       <motion.g
-        variants={container}
+        variants={item}
         initial="initial"
         animate={isInView ? "animate" : "initial"}
       >
