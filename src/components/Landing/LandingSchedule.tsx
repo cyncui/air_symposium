@@ -14,22 +14,16 @@ const items = [
     text: [
       <>
         From Day 1, we gather to share knowledge from a myriad of Indigenous and
-        Asian experiences.
-      </>,
-      <>
-        With <strong>early discussions about our communities</strong>, we
-        unravel what solidarity looks like today and tomorrow.
+        Asian experiences. With community-led discussions, we unravel what
+        solidarity looks like today and tomorrow.
       </>,
     ],
   },
   {
     text: [
       <>
-        Day 2 presents <strong>five guided dialogues</strong> on histories of
-        Asian-Indigenous relations.
-      </>,
-      <>
-        Exhibits and talks highlight researched insights across topics from
+        Day 2 presents five guided dialogues on histories of Asian-Indigenous
+        relations. These highlight researched insights across topics from
         housing and climate justice, to diaspora and decolonizing the arts.
       </>,
     ],
@@ -37,12 +31,9 @@ const items = [
   {
     text: [
       <>
-        <strong>A final day of co-creation</strong>, strengthening
-        relationships, new and old, whether over brunch or during workshops.
-      </>,
-      <>
-        Activities focus on putting new learnings into practice; creating
-        resources to pass on knowledge.
+        A final day of co-creation, strengthening relationships, new and old,
+        whether over brunch or during workshops. Activities focus on putting new
+        learnings into practice; creating resources to pass on knowledge.
       </>,
     ],
   },
@@ -98,9 +89,9 @@ export const LandingSchedule = () => {
               />
             </div>
             {[
-              { id: "day1", date: "2025-09-16", month: "Sep", day: "16" },
-              { id: "day2", date: "2025-09-17", month: "Sep", day: "17" },
-              { id: "day3", date: "2025-09-18", month: "Sep", day: "18" },
+              { id: "day1", date: "2025-09-19", month: "Sep", day: "19" },
+              { id: "day2", date: "2025-09-20", month: "Sep", day: "20" },
+              { id: "day3", date: "2025-09-21", month: "Sep", day: "21" },
             ].map(({ id, date, month, day }, i) => (
               <Link
                 key={id}
