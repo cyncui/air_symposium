@@ -7,6 +7,7 @@ import { OrnamentMD } from "@/components/Ornament/OrnamentMD";
 import { OrnamentWhale } from "@/components/Ornament/OrnamentWhale";
 import { OrnamentLG } from "@/components/Ornament/OrnamentLG";
 import { OrnamentLG2 } from "@/components/Ornament/OrnamentLG2";
+import SponsorMarquee from "@/components/SponsorMarquee/SponsorMarquee";
 
 export default function Home() {
   return (
@@ -67,6 +68,7 @@ export default function Home() {
       <section>
         <LandingSchedule />
       </section>
+      <SponsorMarquee />
     </main>
   );
 }

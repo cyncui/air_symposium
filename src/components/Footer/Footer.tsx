@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="px-7.5 max-w-[2160px] mx-auto">
         <div className="mb-6">
           <a
-            className="inline-block items-center-safe text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl mb-6 group hover:text-theme-dark hover:fill-theme-dark focus:text-theme-dark focus:fill-theme-dark fill-background not-focus:transition-colors"
+            className="inline-block items-center-safe text-2xl md:text-4xl lg:text-6xl 2xl:text-7xl mb-6 group hover:text-theme-dark hover:fill-theme-dark focus:text-theme-dark focus:fill-theme-dark fill-background not-focus:transition-colors font-medium"
             href="mailto:hello@asianindigenousrelations.ca"
             target="_blank"
             rel="noopener noreferrer"
@@ -24,10 +24,9 @@ export const Footer = () => {
           <div>
             <p className="mb-4">
               The symposium is a project by Asian-Indigenous Relations, a
-              collective based in so-called &ldquo;vancouver&rdquo;. It is
-              supported in part by funding from the Social Sciences and
-              Humanities Research Council. For a full list of funding
-              organizations, please visit this page.
+              collective based in &ldquo;vancouver&rdquo;. It is supported in
+              part by funding from the Social Sciences and Humanities Research
+              Council.
             </p>
             <p className="mb-4">
               This site was created by{" "}
@@ -75,8 +74,7 @@ export const Footer = () => {
               >
                 Nathan Lew
               </a>
-              . It is set in ZT Formom, Geist, and Sloop, and built with Next.JS
-              and Tailwind CSS.
+              .
             </p>
           </div>
           {/* Column 2 */}
@@ -101,7 +99,7 @@ export const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 max-sm:flex-row max-sm:items-center">
           <a
             href="https://asianindigenousrelations.ca"
             target="_blank"
@@ -110,7 +108,7 @@ export const Footer = () => {
           >
             <Logo />
           </a>
-          <span className="font-serif text-2xl opacity-50">
+          <span className="font-serif text-2xl opacity-50 max-sm:text-base">
             ALL RIGHTS RESERVED, ASIAN-INDIGENOUS RELATIONS COLLECTIVE 2025
           </span>
         </div>
