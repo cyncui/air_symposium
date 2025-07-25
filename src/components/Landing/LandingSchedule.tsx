@@ -77,7 +77,7 @@ export const LandingSchedule = () => {
           {/* <h2 className="text-center air-heading-2 mb-4">Sessions</h2> */}
           <OrnamentMorph
             progress={scrollYProgress}
-            className="relative w-full m-auto"
+            className="relative w-full m-auto scale-55"
           />
         </div>
         <div className="col-span-full xs:col-start-2 xs:col-span-5 sm:col-start-3 sm:col-span-3 lg:col-span-2 self-center grid grid-cols-[3rem_1fr] gap-1.5">
@@ -132,7 +132,7 @@ export const LandingSchedule = () => {
                     key={i}
                     className="absolute inset-0"
                   >
-                    <article className="lg:text-xl">
+                    <article className="lg:text-lg leading-[1.5em]">
                       {items.text.map((text, j) => (
                         <p
                           className="mb-2 last-of-type:mb-0"
