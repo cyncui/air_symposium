@@ -56,7 +56,7 @@ export const Footer = () => {
               >
                 Jeffrey Su
               </a>
-              ,{" "}
+              , and{" "}
               <a
                 className="underline link"
                 href="https://xiaolanyaya.framer.website/"
@@ -64,15 +64,6 @@ export const Footer = () => {
                 rel="noopener noreferrer"
               >
                 Yaya Zheng
-              </a>
-              , and{" "}
-              <a
-                className="underline link"
-                href="https://www.linkedin.com/in/nathan-lew/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Nathan Lew
               </a>
               .
             </p>
