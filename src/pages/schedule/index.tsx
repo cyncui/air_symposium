@@ -202,18 +202,17 @@ export default function SchedulePage() {
 
     const visibleTimes = times.slice(visibleTimeIndex, visibleTimeIndex + 3);
 
-  // Debug logging
-  console.log("Selected Date:", selectedDate);
-  console.log("Selected Time:", selectedTime);
-  console.log("Available Times:", times);
-  console.log("Current Content:", scheduleContent[selectedDate]?.[selectedTime]);
+  // Type guard to check if content has schedule properties
+  const isScheduleContent = (content: any): content is { activity?: string; workshops?: string[] } => {
+    return content && (content.activity !== undefined || content.workshops !== undefined);
+  };
 
   const currentContent =
     activeTab === "main"
-      ? scheduleContent[selectedDate]?.[selectedTime] ||
-        scheduleContent[selectedDate]?.[getTimesForDate(selectedDate)[0]] ||
+      ? scheduleContent[selectedDate as keyof typeof scheduleContent]?.[selectedTime as keyof (typeof scheduleContent)[keyof typeof scheduleContent]] ||
+        scheduleContent[selectedDate as keyof typeof scheduleContent]?.[getTimesForDate(selectedDate)[0] as keyof (typeof scheduleContent)[keyof typeof scheduleContent]] ||
         { activity: "No content available" }
-      : allDayEventsContent[selectedDate] || allDayEventsContent["SEP 19"];
+      : allDayEventsContent[selectedDate as keyof typeof allDayEventsContent] || allDayEventsContent["SEP 19"];
 
   return (
     <div className="min-h-screen mt-30 relative overflow-hidden max-sm:w-full px-7.5 mx-auto w-10/12 flex">
@@ -305,18 +304,19 @@ export default function SchedulePage() {
             >
               {activeTab === "main" ? (
                 <>
-                  <div>
-                    {currentContent.activity && (
+                  {activeTab === "main" && isScheduleContent(currentContent) && currentContent.activity && (
+                    <div>
                       <div className="text-base font-light opacity-80 mb-1 md:text-base lg:text-lg">
                         Activity
                       </div>
-                    )}
-                    <h2 className="text-3xl font-serif">
-                      {currentContent.activity}
-                    </h2>
-                  </div>
+                      <h2 className="text-3xl font-serif">
+                        {currentContent.activity}
+                      </h2>
+                    </div>
+                  )}
 
-                  {currentContent.workshops &&
+                  {activeTab === "main" && isScheduleContent(currentContent) && 
+                    currentContent.workshops &&
                     currentContent.workshops.length > 0 && (
                       <div className="mt-6">
                         <div className="text-base font-light opacity-80 mb-3 md:text-base lg:text-lg">
