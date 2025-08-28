@@ -31,9 +31,9 @@ export const Header = () => {
         >
           <Image src="/svgs/home_icon.svg" alt="" width={90} height={90} />
         </Link>
-        {/* <menu className="flex gap-8 justify-end">
+        <menu className="flex gap-8 justify-end">
           <LinkItem href="/schedule">Schedule</LinkItem>
-        </menu> */}
+        </menu>
       </nav>
     </motion.header>
   );
