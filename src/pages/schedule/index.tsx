@@ -176,10 +176,18 @@ export default function SchedulePage() {
         );
         setSelectedTime(times[newIndex]);
 
-        const newVisibleIndex = Math.max(
-          0,
-          Math.min(times.length - 3, newIndex - 1)
-        );
+        // Calculate new visible index to ensure selected time is always visible
+        let newVisibleIndex;
+        if (newIndex <= 1) {
+          // If we're at the beginning, start from index 0
+          newVisibleIndex = 0;
+        } else if (newIndex >= times.length - 1) {
+          // If we're at the end, ensure we show the last 3 times
+          newVisibleIndex = Math.max(0, times.length - 3);
+        } else {
+          // For middle positions, keep the selected time in the middle of the 3 visible times
+          newVisibleIndex = newIndex - 1;
+        }
         setVisibleTimeIndex(newVisibleIndex);
         
         // Reset accumulator
@@ -197,6 +205,7 @@ export default function SchedulePage() {
     const availableTimes = getTimesForDate(date);
     const firstTime = availableTimes[0] || "";
     setSelectedTime(firstTime);
+    // Reset visible time index to show first 3 times
     setVisibleTimeIndex(0);
   };
 
@@ -267,7 +276,18 @@ export default function SchedulePage() {
                     <div className="flex-1">
                       {activeTab === "main" && (
                         <motion.button
-                          onClick={() => setSelectedTime(time)}
+                          onClick={() => {
+                            setSelectedTime(time);
+                            // Ensure the clicked time is visible and properly positioned
+                            const timeIndex = times.indexOf(time);
+                            if (timeIndex <= 1) {
+                              setVisibleTimeIndex(0);
+                            } else if (timeIndex >= times.length - 1) {
+                              setVisibleTimeIndex(Math.max(0, times.length - 3));
+                            } else {
+                              setVisibleTimeIndex(timeIndex - 1);
+                            }
+                          }}
                           className={`text-4xl max-sm:text-2xl font-medium transition-opacity text-left ${
                             selectedTime === time ? "opacity-100" : "opacity-70"
                           }`}
