@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Footer } from "@/components/Footer/Footer";
 
 export default function SchedulePage() {
   const [activeTab, setActiveTab] = useState("main");
@@ -156,11 +157,16 @@ export default function SchedulePage() {
   const parallaxY2 = useTransform(scrollY, [0, 300], [0, -30]);
   const parallaxY3 = useTransform(scrollY, [0, 300], [0, -70]);
 
+  const [isHoveringSchedule, setIsHoveringSchedule] = useState(false);
+
   useEffect(() => {
     let scrollAccumulator = 0;
     const scrollThreshold = 100; // Higher number = slower scrolling
     
-    const handleGlobalWheel = (e: WheelEvent) => {
+    const handleWheel = (e: WheelEvent) => {
+      // Only handle scroll if hovering over the schedule component
+      if (!isHoveringSchedule) return;
+      
       e.preventDefault();
       
       // Accumulate scroll delta
@@ -195,9 +201,9 @@ export default function SchedulePage() {
       }
     };
 
-    window.addEventListener("wheel", handleGlobalWheel, { passive: false });
-    return () => window.removeEventListener("wheel", handleGlobalWheel);
-  }, [selectedTime, times]);
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    return () => window.removeEventListener("wheel", handleWheel);
+  }, [selectedTime, times, isHoveringSchedule]);
 
   const handleDateChange = (date: string) => {
     setSelectedDate(date);
@@ -224,8 +230,13 @@ export default function SchedulePage() {
       : allDayEventsContent[selectedDate as keyof typeof allDayEventsContent] || allDayEventsContent["SEP 19"];
 
   return (
-    <div className="min-h-screen mt-30 relative overflow-hidden max-sm:w-full px-7.5 mx-auto w-10/12 flex">
-      <div className="relative z-10 p-4 md:p-6 lg:p-8 w-full">
+        <main>
+      <div 
+        className="min-h-[600px] max-sm:min-h-screen mt-30 relative overflow-hidden max-sm:w-full px-7.5 mx-auto w-10/12 flex"
+        onMouseEnter={() => setIsHoveringSchedule(true)}
+        onMouseLeave={() => setIsHoveringSchedule(false)}
+      >
+        <div className="relative z-10 p-4 md:p-6 lg:p-8 w-full">
         <div className="flex gap-6 mb-6 md:gap-8 md:mb-8 lg:gap-10 lg:mb-10">
           <button
             onClick={() => setActiveTab("main")}
@@ -376,5 +387,7 @@ export default function SchedulePage() {
         </div>
       </div>
     </div>
+    {/* <Footer /> */}
+    </main>
   );
 }
