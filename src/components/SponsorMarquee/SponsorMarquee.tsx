@@ -27,9 +27,6 @@ const sponsorList = [
     name: "SFU Sociology and Anthropology",
   },
   {
-    name: "SFU Geography",
-  },
-  {
     name: "UBC Asian Studies",
   },
   {
